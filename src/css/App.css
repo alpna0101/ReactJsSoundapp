@@ -1,0 +1,4555 @@
+body{
+	padding:0px;
+	overflow-x:hidden;
+	margin:0px;
+}
+body, html{
+	height:100%;
+}
+.form_inner .form-group span {
+    color:#F20000;
+}
+.modal-backdrop.show {
+    opacity: 0.5 !important;
+}
+.fade.in {
+
+    opacity: 1;
+
+}
+.modal-backdrop.show {
+
+    background: rgba(0,0,0,0.89);
+  
+
+}
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../fonts/AvenirNextLTPro-BoldItalic.eot');
+    src: url('../fonts/AvenirNextLTPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-BoldItalic.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-BoldItalic.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-BoldItalic.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-BoldItalic.svg#AvenirNextLTPro-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../fonts/AvenirNextLTPro-Ultralight.eot');
+    src: url('../fonts/AvenirNextLTPro-Ultralight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-Ultralight.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-Ultralight.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-Ultralight.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-Ultralight.svg#AvenirNextLTPro-Ultralight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../fonts/AvenirNextLTPro-Regular.eot');
+    src: url('../fonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-Regular.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-Regular.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Pro Ultralight Cond';
+    src: url('../fonts/AvenirNextPro-UltralighCondIt.eot');
+    src: url('../fonts/AvenirNextPro-UltralighCondIt.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextPro-UltralighCondIt.woff2') format('woff2'),
+        url('../fonts/AvenirNextPro-UltralighCondIt.woff') format('woff'),
+        url('../fonts/AvenirNextPro-UltralighCondIt.ttf') format('truetype'),
+        url('../fonts/AvenirNextPro-UltralighCondIt.svg#AvenirNextPro-UltralighCondIt') format('svg');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../fonts/AvenirNextLTPro-MediumItalic.eot');
+    src: url('../fonts/AvenirNextLTPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-MediumItalic.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-MediumItalic.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-MediumItalic.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-MediumItalic.svg#AvenirNextLTPro-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Med Cond';
+    src: url('../fonts/AvenirNext-MediumCond.eot');
+    src: url('../fonts/AvenirNext-MediumCond.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNext-MediumCond.woff2') format('woff2'),
+        url('../fonts/AvenirNext-MediumCond.woff') format('woff'),
+        url('../fonts/AvenirNext-MediumCond.ttf') format('truetype'),
+        url('../fonts/AvenirNext-MediumCond.svg#AvenirNext-MediumCond') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../fonts/AvenirNextLTPro-Heavy.eot');
+    src: url('../fonts/AvenirNextLTPro-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-Heavy.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-Heavy.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-Heavy.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-Heavy.svg#AvenirNextLTPro-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Demi';
+    src: url('../fonts/AvenirNextLTPro-Demi.eot');
+    src: url('../fonts/AvenirNextLTPro-Demi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-Demi.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-Demi.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-Demi.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-Demi.svg#AvenirNextLTPro-Demi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../fonts/AvenirNextLTPro-Thin.eot');
+    src: url('../fonts/AvenirNextLTPro-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-Thin.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-Thin.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-Thin.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-Thin.svg#AvenirNextLTPro-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Pro Ultralight Cond';
+    src: url('../fonts/AvenirNextPro-UltralightCond.eot');
+    src: url('../fonts/AvenirNextPro-UltralightCond.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextPro-UltralightCond.woff2') format('woff2'),
+        url('../fonts/AvenirNextPro-UltralightCond.woff') format('woff'),
+        url('../fonts/AvenirNextPro-UltralightCond.ttf') format('truetype'),
+        url('../fonts/AvenirNextPro-UltralightCond.svg#AvenirNextPro-UltralightCond') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Cond';
+    src: url('../fonts/AvenirNext-BoldCond.eot');
+    src: url('../fonts/AvenirNext-BoldCond.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNext-BoldCond.woff2') format('woff2'),
+        url('../fonts/AvenirNext-BoldCond.woff') format('woff'),
+        url('../fonts/AvenirNext-BoldCond.ttf') format('truetype'),
+        url('../fonts/AvenirNext-BoldCond.svg#AvenirNext-BoldCond') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Demi';
+    src: url('../fonts/AvenirNextLTPro-DemiItalic.eot');
+    src: url('../fonts/AvenirNextLTPro-DemiItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-DemiItalic.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-DemiItalic.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-DemiItalic.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-DemiItalic.svg#AvenirNextLTPro-DemiItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Thin Cond';
+    src: url('../fonts/AvenirNextLTPro-ThinCondensed.eot');
+    src: url('../fonts/AvenirNextLTPro-ThinCondensed.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-ThinCondensed.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-ThinCondensed.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-ThinCondensed.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-ThinCondensed.svg#AvenirNextLTPro-ThinCondensed') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../fonts/AvenirNextLTPro-Medium.eot');
+    src: url('../fonts/AvenirNextLTPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-Medium.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-Medium.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-Medium.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-Medium.svg#AvenirNextLTPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../fonts/AvenirNextLTPro-Light.eot');
+    src: url('../fonts/AvenirNextLTPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-Light.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-Light.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-Light.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-Light.svg#AvenirNextLTPro-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Demi Cond';
+    src: url('../fonts/AvenirNext-DemiCond.eot');
+    src: url('../fonts/AvenirNext-DemiCond.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNext-DemiCond.woff2') format('woff2'),
+        url('../fonts/AvenirNext-DemiCond.woff') format('woff'),
+        url('../fonts/AvenirNext-DemiCond.ttf') format('truetype'),
+        url('../fonts/AvenirNext-DemiCond.svg#AvenirNext-DemiCond') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Light Cond';
+    src: url('../fonts/AvenirNextLTPro-LightCond.eot');
+    src: url('../fonts/AvenirNextLTPro-LightCond.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-LightCond.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-LightCond.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-LightCond.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-LightCond.svg#AvenirNextLTPro-LightCond') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Med Cond';
+    src: url('../fonts/AvenirNext-MediumCondItalic.eot');
+    src: url('../fonts/AvenirNext-MediumCondItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNext-MediumCondItalic.woff2') format('woff2'),
+        url('../fonts/AvenirNext-MediumCondItalic.woff') format('woff'),
+        url('../fonts/AvenirNext-MediumCondItalic.ttf') format('truetype'),
+        url('../fonts/AvenirNext-MediumCondItalic.svg#AvenirNext-MediumCondItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../fonts/AvenirNextLTPro-Italic.eot');
+    src: url('../fonts/AvenirNextLTPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-Italic.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-Italic.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-Italic.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-Italic.svg#AvenirNextLTPro-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Cond';
+    src: url('../fonts/AvenirNext-CondRegular.eot');
+    src: url('../fonts/AvenirNext-CondRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNext-CondRegular.woff2') format('woff2'),
+        url('../fonts/AvenirNext-CondRegular.woff') format('woff'),
+        url('../fonts/AvenirNext-CondRegular.ttf') format('truetype'),
+        url('../fonts/AvenirNext-CondRegular.svg#AvenirNext-CondRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Cond';
+    src: url('../fonts/AvenirNext-CondItalic.eot');
+    src: url('../fonts/AvenirNext-CondItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNext-CondItalic.woff2') format('woff2'),
+        url('../fonts/AvenirNext-CondItalic.woff') format('woff'),
+        url('../fonts/AvenirNext-CondItalic.ttf') format('truetype'),
+        url('../fonts/AvenirNext-CondItalic.svg#AvenirNext-CondItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro UltLt';
+    src: url('../fonts/AvenirNextLTPro-UltLtItalic.eot');
+    src: url('../fonts/AvenirNextLTPro-UltLtItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-UltLtItalic.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-UltLtItalic.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-UltLtItalic.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-UltLtItalic.svg#AvenirNextLTPro-UltLtItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Thin Cond';
+    src: url('../fonts/AvenirNextLTPro-ThCnIt.eot');
+    src: url('../fonts/AvenirNextLTPro-ThCnIt.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-ThCnIt.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-ThCnIt.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-ThCnIt.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-ThCnIt.svg#AvenirNextLTPro-ThCnIt') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Heavy Cond';
+    src: url('../fonts/AvenirNext-HeavyCondItalic.eot');
+    src: url('../fonts/AvenirNext-HeavyCondItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNext-HeavyCondItalic.woff2') format('woff2'),
+        url('../fonts/AvenirNext-HeavyCondItalic.woff') format('woff'),
+        url('../fonts/AvenirNext-HeavyCondItalic.ttf') format('truetype'),
+        url('../fonts/AvenirNext-HeavyCondItalic.svg#AvenirNext-HeavyCondItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Demi Cond';
+    src: url('../fonts/AvenirNext-DemiCondItalic.eot');
+    src: url('../fonts/AvenirNext-DemiCondItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNext-DemiCondItalic.woff2') format('woff2'),
+        url('../fonts/AvenirNext-DemiCondItalic.woff') format('woff'),
+        url('../fonts/AvenirNext-DemiCondItalic.ttf') format('truetype'),
+        url('../fonts/AvenirNext-DemiCondItalic.svg#AvenirNext-DemiCondItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Cond';
+    src: url('../fonts/AvenirNext-BoldCondItalic.eot');
+    src: url('../fonts/AvenirNext-BoldCondItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNext-BoldCondItalic.woff2') format('woff2'),
+        url('../fonts/AvenirNext-BoldCondItalic.woff') format('woff'),
+        url('../fonts/AvenirNext-BoldCondItalic.ttf') format('truetype'),
+        url('../fonts/AvenirNext-BoldCondItalic.svg#AvenirNext-BoldCondItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../fonts/AvenirNextLTPro-ThinItalic.eot');
+    src: url('../fonts/AvenirNextLTPro-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-ThinItalic.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-ThinItalic.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-ThinItalic.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-ThinItalic.svg#AvenirNextLTPro-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../fonts/AvenirNextLTPro-LightItalic.eot');
+    src: url('../fonts/AvenirNextLTPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-LightItalic.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-LightItalic.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-LightItalic.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-LightItalic.svg#AvenirNextLTPro-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../fonts/AvenirNextLTPro-HeavyItalic.eot');
+    src: url('../fonts/AvenirNextLTPro-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-HeavyItalic.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-HeavyItalic.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-HeavyItalic.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-HeavyItalic.svg#AvenirNextLTPro-HeavyItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Light Cond';
+    src: url('../fonts/AvenirNextLTPro-LtCnIt.eot');
+    src: url('../fonts/AvenirNextLTPro-LtCnIt.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-LtCnIt.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-LtCnIt.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-LtCnIt.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-LtCnIt.svg#AvenirNextLTPro-LtCnIt') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../fonts/AvenirNextLTPro-Bold.eot');
+    src: url('../fonts/AvenirNextLTPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-Bold.woff') format('woff'),
+        url('../fonts/AvenirNextLTPro-Bold.ttf') format('truetype'),
+        url('../fonts/AvenirNextLTPro-Bold.svg#AvenirNextLTPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Heavy Cond';
+    src: url('../fonts/AvenirNext-HeavyCond.eot');
+    src: url('../fonts/AvenirNext-HeavyCond.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNext-HeavyCond.woff2') format('woff2'),
+        url('../fonts/AvenirNext-HeavyCond.woff') format('woff'),
+        url('../fonts/AvenirNext-HeavyCond.ttf') format('truetype'),
+        url('../fonts/AvenirNext-HeavyCond.svg#AvenirNext-HeavyCond') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+/*.playlist_section{margin-top: 55px; margin-bottom: 15px !imp}*/
+.play_img img {
+    max-width: 100%;
+    border-radius: 20px;
+       -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    max-height: 280px;
+}
+.play_sctn a {
+    color: #000;
+}
+.play_sctn a h3, .palylst_cntnt h3{
+    font-size: 20px;
+    font-family:'Avenir Next LT Pro Demi';
+    font-weight: 500;
+    color: #000;
+}
+.play_sctn_inner {
+    margin-bottom: 30px;
+}
+.haedg{
+    margin-bottom: 20px;
+}
+.haedg h2 {
+    font-size: 36px;
+	margin-bottom: 25px;
+	text-transform: uppercase;
+	position:relative;
+	font-weight: bold;
+    font-family: 'Avenir Next LT Pro';
+}
+.haedg h2::after {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    width: 198px;
+    height: 2px;
+    background: linear-gradient(to right, #30bbec, #3b73b9);
+    top: 42px;
+    content: "";
+}
+.membr_sctn .haedg h2:after {
+    width: 260px;
+}
+.haedg p {
+    font-size: 18px;
+    color: #686767;
+    max-width: 70%;
+    margin: 0 auto;
+	font-weight: 400;
+    font-family: 'Avenir Next LT Pro';
+}
+.features_outr {
+    position: relative;
+    margin-bottom: 60px;
+    z-index: 99;
+    float: left;
+    width: 100%;
+}
+.faeture_inner {
+    background-repeat: no-repeat;
+    max-width: 540px;
+    min-height: 263px;
+    position: absolute;
+    top: 15%;
+    left: 46%;
+    background-size: cover;
+	padding: 40px 30px;
+	border-radius: 20px;
+}
+.features_outr h3 {
+    margin-top: 0px;
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.features_outr p {
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 93%;
+    width: 100%;
+    color: #fff;
+    font-family: 'Avenir Next LT Pro';
+}
+.features_outr h5 {
+    font-size: 17px;
+    line-height: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+.features_outr.odd_feat h3, .features_outr.odd_feat p, .features_outr.odd_feat h5 {
+    text-align: right;
+}
+.features_outr.odd_feat p {
+    max-width: 100%;
+    padding-left: 30px;
+}
+.features_outr.odd_feat .faeture_inner {
+    left: 0px;
+	top: 12%;
+}
+section.features_sctn {
+    position: relative;
+    padding: 60px 0px 40px;
+}
+section.features_sctn .haedg h2 {
+    margin-top: 0px;
+}
+.features_outr.odd_feat img {
+    float: right;
+    max-width: 47%;
+    width: 100%;
+}
+.features_sctn::after {
+    background-image: url(../images/shape.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 121px;
+    left: 0px;
+    content: "";
+    min-height: 1900px;
+    z-index: -1;
+}
+section.features_sctn .haedg {
+    margin-bottom: 100px;
+}
+section.membr_sctn, section.pricng_sctn, section.footer_sctn {
+    background-color: #fff;
+    float: left;
+    width: 100%;
+}
+.membr_text {
+    padding-top: 150px;
+}
+.mmr_img {
+    padding: 0px;
+}
+.mmr_img img{
+    max-width: 100%;
+	width: 100%;
+}
+.membr_text ul {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+}
+.membr_text ul li {
+    display: inline-block;
+    width: 30%;
+    margin-right: 26px;
+	float: left;
+}
+.membr_text ul li div {
+    width: 100%;
+    height: 170px;
+    border: 2px solid #e1e1e1;
+    box-shadow: 5px 0px 10px rgba(0,0,0,0.06);
+    border-radius: 5px;
+}
+.membr_text ul li:last-child {
+    margin-right: 0px;
+}
+.membr_text ul li img {
+    max-width: 100%;
+    padding-top: 36px;
+}
+.membr_text ul li h4 {
+    max-width: 90%;
+    margin: 20px auto 0px auto;
+    width: 100%;
+    font-size: 18px;
+    line-height: 25px;
+}
+.btn_join{
+    margin-top: 50px;
+	float: left;
+    width: 100%;
+}
+.btn_join .btn, .banner_cntnt .btn, header.main_header ul.nav.navbar-nav li:last-child a,
+.accunt_btn .btn, .innre_listng ul li .btn, .inner_table_listng  table tbody .btn, .pricbg_inner .btn,
+.currnt_subs ul li .btn, .oinner_puchs_tbl table td .btn{
+    background: #2fc3f2;
+    background: -moz-linear-gradient(left, #2fc3f2 0%, #3c68b2) 100%;
+    background: -webkit-gradient(left top, right top, color-stop(0%,  #2fc3f2), color-stop(100%, #3c68b2));
+    background: -webkit-linear-gradient(left,  #2fc3f2 0%, #3c68b2 100%);
+    background: -o-linear-gradient(left,  #2fc3f2 0%, #3c68b2 100%);
+    background: -ms-linear-gradient(left,  #2fc3f2 0%, #3c68b2 100%);
+    background: linear-gradient(to right,  #2fc3f2 0%, #3c68b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #2fc3f2', endColorstr='#3c68b2', GradientType=1 );
+    max-width: 257px;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 12px;
+    font-size: 20px;
+	box-shadow: 5px 0px 10px rgba(60,105,179,0.15);
+	text-transform:uppercase;
+    border: unset;
+    width:100%;
+    cursor: pointer;
+}
+.banner_cntnt .btn:hover, .banner_cntnt .btn:focus{
+	 background: -moz-linear-gradient(left, #2fc3f2 0%, #3c68b2) 100%;
+    background: -webkit-gradient(left top, right top, color-stop(0%,  #2fc3f2), color-stop(100%, #3c68b2));
+    background: -webkit-linear-gradient(left,  #2fc3f2 0%, #3c68b2 100%);
+    background: -o-linear-gradient(left,  #2fc3f2 0%, #3c68b2 100%);
+    background: -ms-linear-gradient(left,  #2fc3f2 0%, #3c68b2 100%);
+    background: linear-gradient(to right,  #2fc3f2 0%, #3c68b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #2fc3f2', endColorstr='#3c68b2', GradientType=1 );
+}
+section.pricng_sctn {
+    background-image: url(../images/pricong.png);
+    padding: 50px 0px;
+}
+section.pricng_sctn .haedg, section.pricng_sctn .haedg p {
+    color:#fff;
+}
+.prcing_outr {
+    background: #fff;
+    border-radius: 5px;
+	min-height: 470px;
+}
+.prcing_outr>p {
+    font-size: 18px;
+    line-height: 23px;
+    height: 95px;
+    color: #686767;
+    max-width: 98%;
+    margin: 0 auto;
+    font-family: 'Avenir Next LT Pro';
+}
+.prcing_outr ul li img {
+    margin-right: 10px;
+	float: left;
+}
+.prcing_outr li {
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+}
+.prcing_outr li span {
+    font-size: 16px;
+    line-height: 25px;
+    float: left;
+    width: 85%;
+    font-family: 'Avenir Next LT Pro';
+    color: #000;
+    font-weight: 500;
+}
+.prcing_outr ul {
+    padding: 0px 40px 40px;
+}
+.price_headg h5 {
+    margin: 0px;
+    font-size: 18px;
+    color: #fff;
+    line-height: 25px;
+}
+.price_headg h1 {
+    color: #fff;
+    font-size: 46px;
+    margin-top: 5px;
+}
+.price_headg {
+    margin-bottom: 25px;
+}
+.price_headg>div {
+    position: absolute;
+    top: 27px;
+    left: 40px;
+}
+.price_headg img {
+    max-width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.bottom_link ul {
+    margin: 35px 0px;
+}
+.bottom_link ul li {
+    display: inline-block;
+    margin-right: 25px;
+}
+.bottom_link ul li a {
+    color: #000;
+    font-size: 18px;
+    font-family: 'Avenir Next LT Pro';
+    font-weight: normal;
+}
+.bottom_link {
+    padding-top: 45px;
+    border-top: 2px solid #f4f4f4;
+}
+.bottom_link ul li a i {
+    font-size: 36px;
+}
+section.footer_sctn {
+    padding-top: 60px;
+}
+section.footer_sctn h4 {
+    font-size: 22px;
+    max-width: 90%;
+    line-height: 28px;
+    margin: 0 auto;
+	font-family: 'Avenir Next LT Pro';
+    color: #000;
+    font-weight: 500;
+}
+section.footer_sctn h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+	background: linear-gradient(to right, #2fc3f2 40%, #3c68b2 60%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	    font-weight: bold;
+}
+section.footer_sctn h5 {
+    margin-top: 0px;
+    font-size: 24px;
+    font-family: 'Avenir Next LT Pro';
+    color: #000;
+    font-weight: 500;
+}
+.search_bar input {
+    position: relative;
+    max-width: 565px;
+    width: 100%;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 20px;
+    color: #857b7b;
+    border: 2px solid #e1e1e1;
+    box-shadow: 5px 0px 10px rgba(0,0,0,0.06);
+	padding-right: 170px;
+	font-family: 'Avenir Next LT Pro';
+    font-weight: normal;
+}
+.search_bar .btn {
+    position: absolute;
+    right: 0px;
+    border-radius: 50px;
+    padding: 21px 40px;
+    font-size: 20px;
+    color: #fff;
+    background: rgba(91,164,65,1);
+    background: -moz-linear-gradient(left, #2fc3f2 0%, #3c68b2) 100%;
+    background: -webkit-gradient(left top, right top, color-stop(0%, #2fc3f2), color-stop(100%, #3c68b2));
+    background: -webkit-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -o-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -ms-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: linear-gradient(to right, #2fc3f2 0%, #3c68b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #2fc3f2', endColorstr='#3c68b2', GradientType=1 );
+    top: 0px;
+	border: unset;
+}
+.search_bar {
+    margin: 30px auto 60px auto;
+    max-width: 565px;
+    width: 100%;
+    position: relative;
+}
+section.banner_sctn {
+    background-image: url(../images/bg_img.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+}
+section.banner_sctn {
+    background-image: url(../images/bg_img.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+   padding: 100px 0px 100px;
+}
+.banner_cntnt h1, .banner_cntnt p {
+    color: #fff;
+}
+.banner_cntnt h1 {
+    font-size: 52px;
+    max-width: 75%;
+    line-height: 60px;
+    position: relative;
+    margin-bottom: 48px;
+	font-weight: bold;
+	margin-top: 0px;
+}
+.banner_cntnt h1::after {
+    position: absolute;
+    left: 0px;
+    background-color: #fff;
+    width: 288px;
+    height: 5px;
+    bottom: -22px;
+    content: "";
+}
+.banner_cntnt h2{
+    font-size: 30px;
+    color: #2fc1f1;
+	margin: 22px 0px;
+	font-weight: bold;
+}
+.banner_cntnt p {
+    font-size: 16px;
+    line-height: 25px;
+    max-width: 84%;
+    width: 100%;
+	font-weight: 400;
+    font-family: 'Avenir Next LT Pro';
+}
+.banner_cntnt .btn {
+    max-width: 267px;
+    margin: 40px 0px 0px;
+    width: 100%;
+}
+.banner_cntnt .btn:hover {
+    color: #fff;
+    box-shadow: 5px 4px 3px rgba(0,0,0,0.6);
+}
+header.main_header {
+    height: 98px;
+    padding: 14px 0px;
+    background: #fff;
+    width: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    
+}
+.main {
+    padding-top: 95px;
+}
+/* .testan{
+    margin-left:auto;
+    margin-right:auto;
+    width:300px;
+    height:200px;
+    border:1px solid #ffcc29;
+    margin-bottom:20px;
+    margin-top:20px;
+    background:#ffcc29;
+}
+.testan:first-child{
+    margin-top:100px;
+} */
+header.home_header
+{
+    position: absolute;
+}
+span.playerClose {
+    position: absolute;
+    right: 8px;
+    top: 2px;
+    color: #31a3e7;
+    font-size: 20px;
+}
+header.main_header nav {
+    margin-bottom: 0px;
+    min-height: unset;
+    border: unset;
+        z-index: 999;
+        padding: 0px;
+}
+header.main_header ul.nav.navbar-nav {
+    float: right;
+    margin-top: 9px;
+}
+header.main_header ul.nav.navbar-nav li a {
+    font-size: 14px;
+    color: #000;
+    text-transform: uppercase;
+    font-family: 'Avenir Next LT Pro';
+    font-weight: 500;
+	position: relative;
+}
+header.main_header ul.nav.navbar-nav li:last-child a {
+    max-width: 109px;
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 24px;
+    margin-top: 5px;
+    margin-left: 20px;
+	text-align: center;
+}
+header.main_header.shrink {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    height: 84px;
+    padding: 7px 0px;
+    border-bottom: 1px solid #efefef;
+    z-index: 999;
+}
+.risponsive_row {
+	display: none;
+}
+.play_sctn {
+    padding: 40px 0px 0px;
+}
+.price_headg h1 span {
+    font-size: 30px;
+    margin-left: 4px;
+}
+.bottom_link p.text-center, .coypright_txt {
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-family: 'Avenir Next LT Pro';
+    color: #000;
+    font-weight: 500;
+}
+section.about_us, .faq_sctn {
+    background-image: url(../images/bg_inner.jpg);
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 175px 0px;
+    text-align: center;
+}
+section.about_cnnt, .faq_cntnt{
+    padding: 80px 0px;
+}
+.abut_lft p {
+      font-size: 15px;
+    line-height: 22px;
+    color: #1b1c1c;
+	font-family: 'Avenir Next LT Pro';
+	font-weight:500;
+}
+.abut_right img {
+    max-width: 100%;
+}
+.about_headg h1, .faq_headg h1 {
+    font-size: 55px;
+    color: #000;
+    margin: 0px;
+    font-family: 'Avenir Next LT Pro';
+    font-weight: bold;
+}
+.timer_sctn{
+	background-image: url(../images/about_timer.png);
+	background-repeat: no-repeat;
+    background-size: cover;
+	padding: 50px 0px;
+}
+.timer_inner{
+	color:#fff;
+}
+.timer_inner h3 {
+    margin-top: 0px;
+    font-size: 40px;
+    margin: 0px 0px 20px 0px;
+}
+.timer_inner h4 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-family: 'Avenir Next LT Pro';
+    font-weight: 400;
+	position: relative;
+}
+.timer_inner h4::after {
+    width: 135px;
+    height: 4px;
+    margin: 0px auto;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    content: "";
+    bottom: -15px;
+    background: #fff;
+}
+img{
+	max-width:100%;
+}
+.faq_lft .panel-heading {
+    background: transparent;
+    border: unset;
+    border-radius: unset;
+    padding: 0px;
+}
+.abut_lft h3 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Avenir Next LT Pro';
+}
+.faq_lft .panel {
+    box-shadow: unset;
+    border: unset;
+	margin-bottom: 10px;
+}
+.faq_lft .panel-body
+{
+    border: unset!important;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 5px 0px;
+}
+.faq_lft .plus-minus
+{
+    background-color: #30beee;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.faq_lft .plus-minus::after
+{
+    content: "\f068";
+    font-family: fontawesome;
+    position: absolute;
+    top: 0;
+    left:0;
+    color:#fff;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.faq_lft h4.panel-title {
+    font-size: 16px;
+    line-height: 28px;
+    font-family: 'Avenir Next LT Pro Demi';
+    font-weight: 400;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 55px;
+}
+.faq_lft h4.panel-title .collapsed .plus-minus::after
+{
+    content: "\f067";
+}
+.faq_lft p {
+    font-size: 14px;
+    line-height: 22px;
+	margin-bottom: 0px;
+	font-weight: 400;
+    font-family: 'Avenir Next LT Pro';
+}
+section.faq_cntnt {
+    padding-bottom: 0px;
+}
+section.main_section {
+    background-image: url(../images/account_img.png);
+    width: 100%;
+    background-size: cover;
+    padding: 80px 0px;
+    background-position: bottom center;
+    background-attachment: fixed;
+    min-height: 100%;
+    background-color:#314f8c;
+    position: relative;
+}
+.player_div{min-width: 180px;}
+.inner_form {
+    max-width: 570px;
+    margin: 0 auto;
+	width:100%;
+}
+.form_inner input, .form_inner select, .billng_info input{
+    border: 2px solid #e1e1e1;
+    height: 56px;
+    border-radius: 5px;
+    box-shadow: unset;
+    font-size: 18px;
+    color:#000;
+    font-family: 'Avenir Next LT Pro';
+}
+.multi_select {
+    margin-bottom: 30px;
+}
+.multi_select .css-yk16xz-control, .multi_select .css-lpahdxg-control {
+    border: 2px solid #e1e1e1;
+}
+.multi_select input {
+    height: auto;
+    min-height: 42px;
+}
+.multi_select .css-1wa3eu0-placeholder {
+    font-size: 18px;
+    font-family: 'Avenir Next LT Pro';
+    padding-left: 8px;
+}
+.css-1okebmr-indicatorSeparator
+{
+    display: none;
+}
+.css-tj5bde-Svg {
+    height: 38px;
+    width: 38px;
+    color: #000;
+}
+.form_inner select {
+    -webkit-appearance: none;
+    background-image: url(../images/down_arrow.png);
+    background-repeat: no-repeat;
+    background-position: 97% 56%;
+}
+.form_inner label, .billng_info label, .pay_optn label  {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    width: 100%;
+    font-family: 'Avenir Next LT Pro';
+    color: #000;
+}
+.form_inner .form-group {
+    margin-bottom: 30px;
+}
+.form_inner {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 0px 10px rgba(0,0,0,0.06);
+	position: relative;
+}
+.logo_img {
+    margin-bottom: 45px;
+}
+.logo_img h5 {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: 'Avenir Next LT Pro';
+    font-weight: 400;
+}
+.bottom_links li {
+    display: inline-block;
+}
+.bottom_links li:last-child {
+    float: right;
+}
+.bottom_links li a {
+    font-size: 18px;
+    color: #000;
+    font-family: 'Avenir Next LT Pro';
+    font-weight: 500;
+}
+.bottom_links li a img {
+    margin-left: 10px;
+}
+.accunt_btn {
+    margin: 40px 0px 35px 0px;
+}
+.forgt .bottom_links li {
+    float: unset;
+}
+.forgt .accunt_btn {
+    margin: 50px 0px 25px 0px;
+}
+.forgt_icon h5 {
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 85%;
+    margin: 20px auto 30px auto;
+	font-family: 'Avenir Next LT Pro';
+}
+.play_img:hover img {
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.60);
+}
+.bottom_link ul li:last-child{
+	margin-right: 0px;
+}
+header.main_header ul.nav.navbar-nav li.active a, header.main_header ul.nav.navbar-nav li a:hover, header.main_header ul.nav.navbar-nav li a:focus,
+.bottom_link >ul li.active a {
+    color: #30beee;
+	background-color:unset;
+}
+.bottom_link ul li a:hover, .bottom_link ul li a:focus {
+    color: #30bced;
+}
+.faq_sctn {
+    background-image: url(../images/faq_inner.png);
+}
+:focus{
+	outline:unset!important;
+}
+.signup .avatar-upload {
+    position: relative;
+    max-width: 145px;
+    margin: -137px auto 0px auto;
+}
+.signup .avatar-upload .avatar-edit {
+    position: absolute;
+    left: 0px;
+    z-index: 1;
+    top: 0px;
+    width: 100%;
+}
+.signup .avatar-upload .avatar-edit input {
+  display: none;
+}
+.signup .avatar-upload .avatar-edit input + label {
+    display: inline-block;
+    width: 145px;
+    height: 145px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+}
+.signup .avatar-upload .avatar-edit input + label:after {
+  content: "";
+  font-family: 'FontAwesome';
+  color: #757575;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+}
+.signup .avatar-upload .avatar-preview {
+    width: 145px;
+    height: 145px;
+    position: relative;
+    border-radius: 100%;
+}
+.signup .avatar-upload .avatar-preview > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color:#fff;
+}
+.signup .form_inner {
+    margin-top: 140px;
+}
+.signup h4.text-center {
+    font-size: 20px;
+    color: #30beee;
+}
+section.pricng_sctn .haedg h2:after {
+    width: 166px;
+}
+.features_sctn p {
+    max-width: 98%;
+}
+.banner_listng {
+    background-color: rgba(255,255,255,0.88);
+    padding: 40px 20px;
+}
+.banner_listg_headg h3 {
+    margin-top: 0px;
+    font-family: 'Avenir Next LT Pro Demi';
+    font-weight: 500;
+    color: #000;
+    font-size: 24px;
+}
+.banner_listg_headg span {
+    float: right;
+}
+.banner_listg_headg span a {
+    font-size: 18px;
+    color: #2fc1f0;
+	font-family: 'Avenir Next LT Pro';
+}
+.banner_listg_headg span a:hover, .bottom_links li a:hover, .bottom_links li a:focus {
+    color: #3b6eb7;
+}
+.innre_listng ul li {
+    background-color: #fff;
+    box-shadow: 4px 0px 10px rgba(0,0,0,0.10);
+    padding: 22px 110px 22px 78px;
+    margin-bottom: 20px;
+    position: relative;
+    
+}
+.innre_listng ul li:last-child{
+	margin-bottom:0px;
+}
+.innre_listng ul li h4 {
+    font-size: 18px;
+    font-family: 'Avenir Next LT Pro';
+    margin: 0px;
+    font-weight: 500;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.innre_listng ul li h4 img {
+    position:absolute;
+    top:5px;
+    left:8px;
+}
+.innre_listng ul li .btn {
+    position: absolute;
+    top: 18px;
+    right: 14px;
+    font-size: 12px;
+    max-width: 81px;
+    width: 100%;
+    padding: 7px 10px;
+}
+.innre_listng {
+    margin-top: 25px;
+}
+.playlist_img img {
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.45);
+}
+section.playlist_banr {
+    background-image: url(../images/playlist_img.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    padding: 40px 13px 50px 13px;
+}
+.palylst_cntnt {
+    margin-top: 110px;
+}
+.palylst_cntnt h4 {
+    font-size: 24px;
+    color: #000;
+    font-weight: 500;
+	font-family: 'Avenir Next LT Pro';
+}
+.palylst_cntnt h3 {
+    font-size: 36px;
+}
+.palylst_cntnt h5 {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 15px 0px;
+	color: #686767;
+    font-weight: 500;
+    font-family: 'Avenir Next LT Pro';
+}
+.seach_bar {
+    margin-top: 20px;
+}
+i.fa.fa-facebook:hover {
+    color: #3b5998;
+}
+i.fa.fa-youtube-play:hover {
+    color: #cc181e;
+}
+i.fa.fa-instagram:hover {
+     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.seach_bar  input {
+    height: 54px;
+    border-radius: 50px;
+    border: 2px solid #000;
+    box-shadow: 3px 0px 7px rgba(0,0,0,0.14);
+    font-size: 18px;
+    padding: 6px 70px 6px 28px;
+    font-weight: 500;
+    font-family: 'Avenir Next LT Pro';
+    color: #000;
+    background-image: url(../images/search.png);
+    background-repeat: no-repeat;
+    background-position: 98.3% 52%;
+}
+.inner_table_listng table tbody tr, .oinner_puchs_tbl table tbody tr {
+    /* background-color: #fff;
+    box-shadow: 4px 0px 6px rgba(0,0,0,0.10); */
+    padding: 10px 15px;
+    position: relative;
+}
+/* .inner_table_listng table tbody tr:hover, .oinner_puchs_tbl table tbody tr:hover{
+	box-shadow: 4px 0px 10px rgba(0,0,0,0.16);	
+} */
+.table.tableplayer {
+	background: #fff;
+}
+section.paly_table_lstng {
+    float: left;
+    width: 100%;
+    background-color: #eeeeee;
+    padding: 10px 0px 30px 0px;
+	margin-bottom: 100px;
+}
+.inner_table_listng table th {
+    background-color: #eee;
+}
+.inner_table_listng table th, .inner_table_listng table tbody td, .oinner_puchs_tbl table tbody td{
+	vertical-align:middle;
+	font-size: 16px;
+	border: unset;
+}
+.inner_table_listng table thead th, .oinner_puchs_tbl table thead th {
+    font-size: 16px;
+    color: #a9a5a5;
+    font-weight: 500;
+	padding:25px 14px;
+}
+.inner_table_listng table tbody td img, .oinner_puchs_tbl table tbody td img, .banner_listng .innre_listng ul li img{
+    margin-right: 20px;
+	opacity: 0.8;
+}
+.inner_table_listng table tbody td img:hover, .oinner_puchs_tbl table tbody td img:hover, .banner_listng .innre_listng ul li img:hover{
+	opacity: 1;
+}
+.inner_table_listng table tbody td:nth-child(1), .inner_table_listng table tbody td:nth-child(2), .oinner_puchs_tbl table tbody td{
+	color: #000;
+    font-weight: 500;
+    font-family: 'Avenir Next LT Pro';
+}
+section.playlist_banr .btn {
+    font-size: 20px;
+    border: 2px solid #31b7ea;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    width: 223px;
+    height: 49px;
+    color: #31b7ea;
+    line-height: 36px;
+    float: left;
+    opacity: 1;
+    font-weight: unset;
+    vertical-align: middle;
+}
+.inner_table_listng table tbody tr:hover, .oinner_puchs_tbl table tbody tr:hover{
+	background-color:#f7f7f7;
+}
+.inner_table_listng table tbody .btn {
+    font-size: 12px;
+    max-width: 81px;
+    padding: 6px 12px;
+}
+header.main_header ul.nav.navbar-nav li:last-child a:hover, header.main_header ul.nav.navbar-nav li:last-child a:focus {
+    color: #fff;
+}
+/* section.play_song .inner_table_listng table tbody tr{
+	box-shadow: 4px 0px 10px rgba(0,0,0,0.30);
+} */
+section.play_song table tbody tr td img{
+
+    cursor: pointer;
+}
+.click_meplay{
+    cursor: pointer; 
+}
+section.play_song table tbody tr td:nth-child(1) img{
+	margin-right:20px;
+}
+section.play_song tbody td:nth-child(1) img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50px;
+}
+
+.singer_title {
+	position: relative;
+	padding-left: 100px;
+	height: 90px;
+    width: 190px;
+    display: table;
+
+
+}
+.singer_title p {
+	display: table-cell;
+    vertical-align: middle;
+    padding-left: 90px;
+}
+.singer_title img {
+
+    position: absolute;
+    left: 0;
+    top: 4px;
+
+}
+section.play_song {
+    float: left;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    display: none;
+	    z-index: 9999;
+}
+.paypal_btn.disabled {
+	pointer-events: none;
+}
+section.play_song table.table {
+    margin-bottom: 0px;
+}
+.paddg_0 {
+    padding: 0px;
+}
+.plans_popup .modal-dialog {
+    max-width: 1290px;
+    width: 100%;
+    margin: 74px auto;
+}
+.modal-backdrop.fade.in {
+    background: rgba(0,0,0,0.89);
+    opacity: unset;
+    z-index: 999 !important;
+}
+.plans_popup .modal-content {
+    background-color: #e6e6e6;
+    border-radius: unset;
+    border: unset;
+}
+.pricng {
+    padding: 0px 50px 50px 50px;
+}
+.plans_popup .close {
+    position: absolute;
+    right: -35px;
+    opacity: unset;
+    top: -33px;
+    height: 53px;
+width: 53px;
+background: #30beee;
+border-radius: 100%;
+}
+.plans_popup h4 {
+    font-size: 36px;
+    color: #30beee;
+    text-transform: uppercase;
+    padding-bottom: 55px;
+	font-family: 'Avenir Next LT Pro Demi';
+}
+.pricbg_inner .btn {
+    display: block;
+    margin-top: 55px;
+    max-width: 205px;
+}
+.header.inner_head {
+    box-shadow: 4px 0px 10px rgba(0,0,0,0.10);
+}
+.recmnd_sctn {
+    background: transparent!important;
+}
+.recmnd_sctn thead tr th {
+    background: transparent;
+    border: unset!important;
+}
+.recmnd_sctn h2{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Avenir Next LT Pro';
+    margin-bottom: 20px;
+}
+section.paly_table_lstng.recmnd_sctn {
+    padding: 30px 0px 0px;
+    margin-bottom: 0px;
+}
+.profie_bnner .avatar-upload {
+  position: relative;
+  width: 100%;
+}
+.profie_bnner .avatar-upload .avatar-edit {
+    position: absolute;
+    right: 20px;
+    z-index: 1;
+    bottom: 20px;
+}
+.profie_bnner .avatar-upload .avatar-edit input {
+  display: none;
+}
+.profie_bnner .avatar-upload .avatar-edit input + label {
+    width: 245px;
+    height: 43px;
+    margin-bottom: 0;
+    background: rgba(0,0,0,0.60);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    border-radius: 50px;
+    color: #fff;
+    line-height: 42px;
+    text-align: center;
+    font-size: 16px;
+}
+.profie_bnner .avatar-upload .avatar-edit input + label:hover {
+  background: rgba(0,0,0,0.80);
+}
+.profie_bnner .avatar-upload .avatar-edit input + label:after {
+  content: "";
+  color: #757575;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+}
+.profie_bnner .avatar-upload .avatar-preview {
+  width: 100%;
+  height: 468px;
+  position: relative;
+}
+.profie_bnner .avatar-upload .avatar-preview > div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.profie_bnner .avatar-upload .avatar-edit input + label img {
+    margin-right: 10px;
+}
+.profie_bnner .avatar-upload .avatar-preview::after {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: -webkit-gradient(left top, right top, color-stop(0%, #2fc3f2), color-stop(100%, #3c68b2));
+    background: -webkit-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -o-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -ms-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: linear-gradient(to right, #2fc3f2 0%, #3c68b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #2fc3f2', endColorstr='#3c68b2', GradientType=1 );
+	opacity:0.4;
+}
+section.profile_sction {
+    background-color: #eef3f6;
+    padding: 50px 0px;
+}
+.profle_chng {
+    max-width: 430px;
+    width: 100%;
+}
+.profle_chng .avatar-upload {
+  position: relative;
+}
+.profle_chng .avatar-upload .avatar-edit {
+    position: absolute;
+    right: -2px;
+    z-index: 1;
+    bottom: 59px;
+}
+.profle_chng .avatar-upload .avatar-edit input {
+  display: none;
+}
+.profle_chng .avatar-upload .avatar-edit input + label {
+    display: inline-block;
+    width: 84px;
+    height: 84px;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+}
+.profle_chng .avatar-upload .avatar-preview > div {
+    width: 430px;
+    height: 430px;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: left;
+    box-shadow: unset;
+}
+.upld_ims {
+    margin-top: -261px;
+}
+.user_biodata {
+    margin-top: 50px;
+}
+.user_biodata h2 {
+    font-weight: bold;
+    font-family: 'Avenir Next LT Pro';
+    color: #000;
+    margin-bottom: 10px;
+}
+.user_biodata h4 {
+    font-size: 20px;
+    color: #30baec;
+    font-weight: 500;
+	font-family: 'Avenir Next LT Pro';
+}
+.user_biodata h3 {
+    font-size: 20px;
+    font-weight: 500;
+	font-family: 'Avenir Next LT Pro';
+	color:#000;
+}
+.currnt_subs {
+    background-color: #000;
+    padding: 26px;
+    color: #fff;
+}
+.currnt_subs h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+	font-family: 'Avenir Next LT Pro Demi';
+}
+.plan_tabl {
+    background-color: #56c2ed;
+    padding: 25px 20px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+.plan_tabl table {
+    margin-bottom: 0px;
+}
+.plan_tabl table tbody td, .plan_tabl table tbody tr th {
+    border: unset;
+    font-size: 18px;
+    font-weight: 500;
+	font-family: 'Avenir Next LT Pro';
+	padding: 6px;
+}
+.plan_tabl table tbody td{
+	font-size: 16px;
+    font-weight: 400;
+}
+.plan_tabl table th{
+	color:#000;
+}
+.currnt_subs ul li h5 {
+    margin-bottom: 8px;
+}
+.currnt_subs ul li p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.60);
+	font-family: 'Avenir Next LT Pro';
+}
+.currnt_subs ul li {
+    position: relative;
+}
+.currnt_subs ul li .btn {
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    color: #fff;
+    font-size: 13px;
+    padding: 10px;
+    max-width: 220px;
+    font-family: 'Avenir Next LT Pro Demi';
+    width: 100%;
+}
+.oinner_puchs_tbl {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 40px 20px 20px 20px;
+	margin-top: 25px;
+}
+.purch_table {
+    margin-top: 30px;
+}
+.purch_table h3 {
+    color: #2fc1f0;
+    font-weight: 600;
+    font-size: 30px;
+	font-family: 'Avenir Next LT Pro';
+}
+.purch_table .banner_listg_headg {
+    padding: 0px 25px;
+}
+.purch_table span{
+	font-weight:400;
+}
+.oinner_puchs_tbl table th:nth-child(2), .oinner_puchs_tbl table td:nth-child(2) {
+    text-align: center;
+    width: 52%;
+}
+.playlist_pop .innre_listng ul li {
+    padding: 0 !important;
+}
+.playlist_pop .innre_listng ul li a {
+    padding: 45px 25px 45px 120px;
+    display: block;
+}
+.playlist_pop .innre_listng ul li a img {
+    width: 100px;
+}
+.oinner_puchs_tbl table thead th {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px 8px;
+	font-family: 'Avenir Next LT Pro';
+	border-bottom: unset;
+}
+.oinner_puchs_tbl table td .btn {
+    font-size: 12px;
+    max-width: 126px;
+    width: 100%;
+    padding: 8px;
+	font-family: 'Avenir Next LT Pro';
+	font-weight:500;
+}
+.billng_info1, .summry_cart {
+    background-color: #eef3f6;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.25);
+    padding: 30px 25px;
+    float: left;
+    width: 100%;
+}
+.billng_info1 {
+    margin-left: 16px;
+    max-width: 98%;
+}
+section.cart_sctn {
+    padding: 145px 0px 5px;
+}
+.billng_info1 h4, .summry_cart h4 {
+    font-size: 20px;
+    margin: 0px 0px 30px 0px;
+    font-weight: 600;
+	font-family: 'Avenir Next LT Pro Demi';
+	color: #000;
+}
+header.inner_head ul.navbar-nav li a span {
+    position: absolute;
+    right: 0px;
+    top: 14px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50px;
+    background: -webkit-gradient(left top, right top, color-stop(0%, #2fc3f2), color-stop(100%, #3c68b2));
+    background: -webkit-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -o-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -ms-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: linear-gradient(to right, #2fc3f2 0%, #3c68b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #2fc3f2', endColorstr='#3c68b2', GradientType=1 );
+}
+header.inner_head ul.navbar-nav li:nth-child(4) a {
+    padding-right: 30px!important;
+}
+.pay_optn .panel-heading {
+    background-color: #fff!important;
+    border: 2px solid #e1e1e1!important;
+    padding: 15px 15px;
+}
+.pay_optn .panel-heading h4 {
+    margin-bottom: 0px;
+	line-height: 34px;
+}
+.pay_optn .panel-body, .pay_optn .panel-default{
+    background: transparent!important;
+    border: unset!important;
+}
+.pay_optn .panel-body {
+    padding: 15px 0px 0px;
+}
+.card_input, .exp_sctn{
+    margin-bottom: 15px;
+}
+.exp_sctn {
+    display: inline-block;
+    width: 100%;
+}
+.inner_exprtn {
+    display: inline-block;
+    width: 70%;
+}
+.inner_exprtn select {
+    float: left;
+    width: 48%;
+    display: inline-block;
+    margin-right: 6px;
+}
+.cvv_no {
+    display: inline-block;
+    width: 26%;
+    float: right;
+}
+.pay_optn input.form-control, .pay_optn select.form-control{
+    border: 2px solid #e1e1e1;
+    height: 44px;
+    font-size: 18px;
+	color: rgba(0,0,0,0.50);
+    font-family: 'Avenir Next LT Pro';
+}
+.pay_optn .panel-group .panel {
+    box-shadow: unset;
+}
+.pay_optn h4 label {
+    font-weight: 600;
+	font-family: 'Avenir Next LT Pro Demi';
+	font-size:20px;
+	margin-bottom: 0px;
+	padding-left: 45px;
+}
+.container1 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.container1 .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/uncheck.png);
+	width:35px;
+	height:35px;
+	background-repeat: no-repeat;
+}
+.container1 input:checked ~ .checkmark {
+  background-image: url(../images/check.png);
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.billng_info {
+    max-width: 96%;
+    position: relative;
+}
+img.right_pay_img {
+    float: right;
+}
+.billng_info::after {
+    position: absolute;
+    right: -28px;
+    top: 39px;
+    background: #30beee;
+    width: 2px;
+    min-height: 526px;
+    content: "";
+}
+.container1 input:checked ~ .checkmark:after {
+  display: block;
+}
+.summry_cart ul li h5, .summry_cart ul li h3{
+    font-size: 18px;
+    font-weight: 600;
+	font-family: 'Avenir Next LT Pro';
+	margin: 0px;
+}
+.summry_cart ul li h5 span, .summry_cart ul li h3 span {
+    float: right;
+}
+.summry_cart ul li h3 {
+    font-weight: 500;
+    margin:14px 0px 0px;
+}
+.summry_cart ul li {
+    border-bottom: 1px solid #dedbdb;
+    padding: 18px 0px;
+}
+.summry_cart ul li:last-child{
+	 border-bottom:unset;
+}
+.container_box {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Avenir Next LT Pro';
+    font-weight: 500;
+	line-height: 25px;
+}
+.container_box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.container_box .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 23px;
+  width: 27px;
+  background-image: url(../images/unchckd.png);
+  background-repeat:no-repeat;
+  background-size:contain;
+}
+.container_box input:checked ~ .checkmark {
+  background-image: url(../images/chckd.png);
+}
+.container_box .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container_box input:checked ~ .checkmark:after {
+  display: block;
+}
+p.chckbx span {
+    color: #2fc3f2;
+}
+.summry_cart ul {
+    margin-bottom: 8px;
+}
+.summry_cart h6 {
+    margin-top: 0px;
+    font-size: 18px;
+	font-family: 'Avenir Next LT Pro';
+	font-weight: 500;
+}
+.summry_cart h4 {
+    margin-bottom: 20px;
+}
+.summry_cart ul li:nth-child(1) h3, .summry_cart ul li:nth-child(2) h3 {
+    margin: 0px;
+    font-size: 16px;
+}
+.summry_cart ul li:nth-child(1) h3 img, .summry_cart ul li:nth-child(2) h3 img {
+    margin-right: 10px;
+}
+.summry_cart {
+    min-height: 644px;
+}
+.summry_cart .btn {
+    max-width: 200px;
+    background: red;
+    color: #fff;
+    display: block;
+    margin: 35px auto;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 50px;
+	background: -webkit-gradient(left top, right top, color-stop(0%, #2fc3f2), color-stop(100%, #3c68b2));
+    background: -webkit-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -o-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -ms-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: linear-gradient(to right, #2fc3f2 0%, #3c68b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #2fc3f2', endColorstr='#3c68b2', GradientType=1 )
+}
+.gen_type {
+    margin-top: 40px;
+}
+.gen_type ul li {
+    display: inline-block;
+    margin-right: 15px;
+    width: 30%;
+}
+.gen_type ul li:last-child{
+	 margin-right: 0px;
+}
+.gen_type ul li .btn {
+    width: 100%;
+    border-radius: 50px;
+    background-color: #fff;
+    border: 2px solid #cac8c8;
+    font-size: 16px;
+    color: #56c2ed;
+	font-family: 'Avenir Next LT Pro';
+}
+.gen_type>ul {
+    margin-bottom: 35px;
+}
+.gen_type h4{
+	font-family: 'Avenir Next LT Pro Demi';
+}
+.summry_cart.chkout_user li:nth-child(1), .summry_cart.chkout_user li:nth-child(2) {
+    border: unset;
+}
+.summry_cart.chkout_user li:nth-child(1), .summry_cart.chkout_user li:nth-child(2), .summry_cart.chkout_user li:nth-child(3){
+    padding: 8px 0px;
+}
+.summry_cart.chkout_user li:nth-child(1) h3 span, .summry_cart.chkout_user li:nth-child(2) h3 span, .summry_cart.chkout_user li:nth-child(3) h3 span{
+    line-height: 20px;
+}
+ .summry_cart.chkout_user li:nth-child(3) h3 {
+    margin: 0px;
+    font-size: 16px;
+}
+.summry_cart.chkout_user li.tlt_bill h3 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+	font-weight: 600;
+    font-family: 'Avenir Next LT Pro';
+}
+.summry_cart.chkout_user {
+    min-height: unset;
+    padding: 20px 25px 0px;
+}
+.price_table table tbody tr {
+    box-shadow: unset;
+    border-bottom: 1px solid #dedbdb;
+}
+.price_table table tbody td {
+    padding: 18px 15px;
+}
+.price_table table thead th {
+    font-weight:500;
+    padding: 20px 20px;
+	color:#000;
+    background-color: #eef3f6;
+}
+.price_table .oinner_puchs_tbl {
+    padding: 0px;
+}
+.price_table h5 {
+    font-size: 18px;
+    color: #8b8a8a;
+    margin-bottom: 30px;
+	font-family: 'Avenir Next LT Pro';
+	font-weight:400;
+}
+.price_table h3 {
+    font-size: 22px;
+    color: #56c2ed;
+	font-family: 'Avenir Next LT Pro Demi';
+}
+.save_optn {
+    background: -webkit-gradient(left top, right top, color-stop(0%, #2fc3f2), color-stop(100%, #3c68b2));
+    background: -webkit-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -o-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -ms-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: linear-gradient(to top, #2fc3f2 0%, #3c68b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #2fc3f2', endColorstr='#3c68b2', GradientType=1 );
+    margin-bottom: 25px;
+    border-radius: 8px;
+    padding: 15px;
+}
+.save_optn h1 {
+    margin: 0px;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Avenir Next LT Pro';
+    font-weight: 600;
+	text-align:center;
+	line-height: 34px;
+}
+.save_optn h4 {
+    font-size: 22px;
+    color: #fff;
+    font-family: 'Avenir Next LT Pro Demi';
+    line-height: 41px;
+    margin: 0px;
+}
+.save_optn ul li {
+    display: inline-block;
+    width: 60%;
+}
+.save_optn ul li:Last-child {
+    width: auto;
+    margin-left: 15px;
+}
+p.coypright_txt{
+    margin: 30px 0px 0px 0px;
+	color:#fff;
+}
+.modal-dialog.modal-sm.add_onpop{
+    max-width: 470px !important;
+}
+.summry_btns .btn {
+    display: inline-block;
+    width: 50%;
+    margin-left: 10px;
+	border:unset;
+}
+.container_box.newbox span {
+    float: right;
+}
+.container_box.newbox {
+    width: 100%;
+}
+.summry_btns {
+    margin: auto;
+    text-align: center;
+}
+section.play_song .inner_table_listng {
+    box-shadow: 4px 0px 10px rgba(0,0,0,0.08);
+}
+.chng_status h4 {
+    text-transform: capitalize;
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+.chng_status h5 {
+    font-size: 22px;
+    font-family: 'Avenir Next LT Pro Demi';
+}
+.chng_status ul li {
+    display: inline-block;
+}
+.chng_status ul {
+    margin: 45px 0px;
+}
+.chng_status ul li {
+    display: inline-block;
+    max-width: 257px;
+    width: 100%;
+}
+.chng_status ul li .btn {
+    font-size: 20px;
+    border-radius: 50px;
+    font-family: 'Avenir Next LT Pro Demi';
+    width: 100%;
+    line-height: 45px;
+	box-shadow:5px 0px 10px rgba(0,0,0,0.15);
+}
+.chng_status ul li:nth-child(1) .btn{
+   border: 2px solid #306db7;
+    color: #30beee;
+	background-color:#fff;
+}
+.chng_status ul li:nth-child(2) .btn{
+     background: -moz-linear-gradient(left, #2fc3f2 0%, #3c68b2) 100%;
+    background: -webkit-gradient(left top, right top, color-stop(0%, #2fc3f2), color-stop(100%, #3c68b2));
+    background: -webkit-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -o-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -ms-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: linear-gradient(to right, #2fc3f2 0%, #3c68b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #2fc3f2', endColorstr='#3c68b2', GradientType=1 );
+    color: #fff;
+}
+.chng_status ul li:nth-child(1) {
+    margin-right: 30px;
+}
+div#change_status .modal-dialog {
+    max-width: 722px;
+    margin-top: 300px;
+}
+.bottom_links li a i {
+    margin-left: 10px;
+}
+a:hover, .btn:hover {
+    box-shadow: 8px 0px 10px rgba(0,0,0,0.16)!important;
+}
+a:hover, a:focus{
+	text-decoration:unset;
+}
+a.navbar-brand:hover, a.navbar-brand:focus, header.main_header ul.nav.navbar-nav li a:hover, header.main_header ul.nav.navbar-nav li a:focus, section.footer_sctn h3 a:hover, section.footer_sctn h3 a:focus,
+.bottom_link ul li a:hover, .bottom_link ul li a:focus, .bottom_links li a:hover, .bottom_links li a:focus, .banner_listg_headg span a:hover, .banner_listg_headg span a:focus, .paypall_btn a:hover, .paypall_btn a:focus,
+.faq_lft h4.panel-title a:hover, .faq_lft h4.panel-title a:focus, .user_biodata span a:hover, .user_biodata span a:focus{
+    box-shadow: unset!important;
+}
+.paypall_btn img {
+    max-width: 100%;
+}
+header.main_header ul.nav.navbar-nav li:last-child a:hover, header.main_header ul.nav.navbar-nav li:last-child a:focus {
+    box-shadow: 8px 0px 10px rgba(0,0,0,0.16)!important;
+}
+.bottom_link>a:hover , .bottom_link>a:focus, section.cart_sctn .oinner_puchs_tbl a:hover, section.cart_sctn .oinner_puchs_tbl a:focus{
+    box-shadow: unset!important;
+}
+.summry_cart.chkout_user li:nth-child(2), .summry_cart.chkout_user li:nth-child(3) {
+    display: none;
+}
+.summry_cart.chkout_user li:nth-child(1) {
+    border-bottom: 1px solid #dedbdb;
+}
+.play_listbg_new_popup .modal-dialog {
+    max-width: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+
+
+.note {
+        background: #dfdcdc;
+        padding: 10px 5px;
+        width: 220px;
+        border-radius: 9px;
+        text-align: center;
+        position: relative;
+    }
+    .note p{
+        margin: 0;
+    }
+
+    .note::after {
+        content: "";
+        position: absolute;
+        border-right: 13px solid #fff0;
+        border-left: 13px solid #fff0;
+        border-top: 13px solid #dfdcdc;
+        border-bottom: 13px solid #fff0;
+        bottom: -25px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .note_box {
+        position: fixed;
+        bottom: 90px;
+        z-index: 999999999;
+      
+    }
+   
+    .note a i {
+    
+     
+        border: 1px solid;
+        padding: 3px;
+        border-radius: 50%;
+        height: 24px;
+        width: 24px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 15px;
+      
+    
+    }
+   
+    .note a {
+    
+        text-align: right;
+        float: right;
+        margin-top: -6px;
+      
+      
+    
+    }
+    .ryt_recpt_contnt p span {
+        float: right;
+        margin-right: -32px;
+        font-size: 16px;
+        line-height: 31px;
+    }
+    #rating_pop{
+        display: none;
+    }
+    .orderdetail_h{
+        border-bottom: 1px solid;
+    border-bottom-color: currentcolor;
+           border-color: grey;
+    }
+    .player_rating .rating{
+        left: inherit;
+    }
+
+    .player_rating {
+        position: relative;
+    }
+
+
+
+.play_listbg_new_popup .modal-content {
+    float: left;
+    width: 100%;
+    border-radius: unset;
+    box-shadow: unset;
+    border: unset;
+    height: 100%;
+    overflow-y: auto;
+}
+.play_listbg_new_popup .modal-body {
+    padding: 0px;
+}
+ul{
+	padding:0px;
+	margin:0px;
+	list-style-type:none;
+}
+.user_biodata span img {
+    width: 40px;
+    margin-left: 10px;
+}
+	.modal.right .modal-dialog {
+		position: fixed;
+		margin: auto;
+		width: 320px;
+		height: 100%;
+		-webkit-transform: translate3d(0%, 0, 0);
+		    -ms-transform: translate3d(0%, 0, 0);
+		     -o-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+	}
+
+	
+	.modal.right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+    border-radius: unset;
+    box-shadow: unset;
+    border: unset;
+}
+	
+	.modal.right .modal-body {
+		padding: 15px 15px 80px;
+	}
+	.modal.right button.btn {
+    background: transparent;
+    color: #000;
+    box-shadow: unset;
+    font-size: 24px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0px 7px;
+    text-align: center;
+	    vertical-align: middle;
+    line-height: 23px;
+}
+modal.right button.close {
+    font-size: 40px;
+}
+ .modal.right .innre_listng {
+    margin-top: 50px;
+}
+/*Right*/
+	.modal.right.fade .modal-dialog {
+		right: -450px;
+		-webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+		   -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+		     -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+		        transition: opacity 0.3s linear, right 0.3s ease-out;
+	}
+.modal.right .modal-dialog {
+    right: 0;
+    max-width: 450px;
+    width: 100%;
+}
+	
+.modal.right.fade.in .modal-dialog{
+		right: 0;
+	}
+	.modal.right .summry_cart.chkout_user {
+    padding: 0px;
+    background: transparent;
+    box-shadow: unset;
+    display: inline-block;
+}
+.modal.right .summry_btns {
+    display: inline-block;
+    width: 100%;
+}
+.modal.right .summry_btns a.btn {
+    display: inline-block;
+    width: 47%;
+    float: left;
+    color: #fff;
+    max-width: 100%;
+    font-size: 14px;
+     margin-top: 10px;
+     padding: 12px 30px;
+     margin-left: 10px;
+     
+}
+.modal.right .modal-header h4 {
+    font-family: 'Avenir Next LT Pro';
+    font-size: 24px;
+}
+.modal.right .modal-header button.close {
+    line-height: 39px;
+    font-size: 40px;
+    font-weight: normal;
+}
+.modal.right{
+	display:none;
+}
+#root, .main {
+    height: 100%;
+}
+.css-1alnv5e .css-tj5bde-Svg {
+	height: 14px;
+	width: 14px;
+}
+/* admin css	 */
+.adminclass .avatar-upload {
+    position: relative;
+    max-width: 145px;
+    margin: -137px auto 0px auto;
+}
+.adminclass .avatar-upload {
+    position: relative;
+    max-width: 145px;
+    margin: -137px auto 0px auto;
+}
+.adminclass .avatar-upload .avatar-edit {
+    position: absolute;
+    left: 0px;
+    z-index: 1;
+    top: 0px;
+    width: 100%;
+}
+.adminclass .avatar-upload .avatar-edit input {
+  display: none;
+}
+.adminclass .avatar-upload .avatar-edit input + label {
+    display: inline-block;
+    width: 145px;
+    height: 145px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+}
+.adminclass .avatar-upload .avatar-edit input + label:after {
+  content: "";
+  font-family: 'FontAwesome';
+  color: #757575;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+}
+.adminclass .avatar-upload .avatar-preview {
+    width: 145px;
+    height: 145px;
+    position: relative;
+  
+}
+.adminclass .avatar-upload .avatar-preview > div {
+  width: 100%;
+  height: 100%;
+  margin-top: 120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color:#fff;
+}
+.adminclass .form_inner {
+    margin-top: 140px;
+}
+.adminclass h4.text-center {
+    font-size: 20px;
+    color: #30beee;
+}
+section.admin_login {
+    background-color: #3c68b2;
+    background-image: unset;
+}
+section.admin_login a.btn {
+    background-color: #3c68b2;
+    background-image: unset;
+}
+.errors{
+    text-align: center;
+}
+.error{
+    color:red
+}
+/* daqshboard css */
+#wrapper nav.navbar.navbar-default.navbar-static-top {
+    background-color: #2f5696;
+    position: fixed;
+    width: 100%;
+}
+#wrapper {
+    width: 100%;
+    background-color: #3c68b2;
+}
+#wrapper .navbar-default.sidebar {
+    background-color: #2f5696;
+    height: 100%;
+    position: fixed;
+    top: 8px;
+    left: 0px;
+}
+#wrapper .navbar-default.sidebar ul li a {
+    color: #fff;
+    font-size: 16px;
+	background-color: transparent;
+}
+#page-wrapper {
+    padding: 0 15px;
+    min-height: 568px;
+    background-color: #fff;
+}
+.admin_haedg span {
+    position: absolute;
+    right: 30px;
+    top: 6px;
+}
+.admin_haedg span .btn.btn_admin {
+    color: #fff;
+    border: 1px solid #fff;
+}
+.admin_haedg span .btn.btn_admin:hover, .admin_haedg span .btn.btn_admin:focus{
+    background-color: #fff;
+    color:#2f5696;
+}
+.paypal_btn{
+    margin-top: 40px;
+}
+.billing-new .billng_info::after{
+    display: none;
+}
+.billing-new .summry_cart{
+    min-height: auto;
+}
+.oinner_puchs_tbl table tr td img {
+    margin-right: 10px;
+}
+#view_recpt_modal .modal-content {
+    border-radius: 0px;
+     box-shadow: unset;
+ }
+ div#view_recpt_modal .modal-dialog {
+     max-width: 900px;
+     width: 100%;
+     margin: 60px auto;
+ }
+ .left_recpt_contnt, .dwnld_recipt .btn {
+    background: #2fc3f2;
+     background: -moz-linear-gradient((left, #2fc3f2 0%, #3c68b2) 100%);
+     background: -webkit-gradient(left top, right top, color-stop(0%, #2fc3f2), color-stop(100%, #3c68b2));
+     background: -webkit-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+     background: -o-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+     background: -ms-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+     background: linear-gradient(to right, #2fc3f2 0%, #3c68b2 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #2fc3f2', endColorstr='#3c68b2', GradientType=1 );
+ }
+ #view_recpt_modal .modal-body {
+     padding: 0px;
+     float: left;
+     width: 100%;
+     background: #fff;
+ }
+ #view_recpt_modal .modal-body .padding_0_re{
+ padding:0px;
+ }
+ .ryt_recpt_contnt {
+     padding: 0px 20px;
+ }
+ .left_recpt_contnt ul li {
+     color: #fff;
+     border-bottom: 1px solid rgba(255,255,255,0.40);
+     padding: 10px 0px;
+     padding: 20px;
+ }
+ .left_recpt_contnt ul li h4 {
+     font-size: 20px;
+     font-weight: bold;
+     margin-top:0px;
+ }
+ .left_recpt_contnt ul li p {
+     font-size: 16px;
+     margin: 0px;
+ }
+ .top_recpt_logo {
+     padding: 10px 20px;
+ }
+ .ryt_recpt_contnt h3 {
+     font-size: 24px;
+     font-family: 'Avenir Next LT Pro';
+ }
+ .ryt_recpt_contnt h3 span {
+     float: right;
+     margin-right: 20px;
+     font-size: 16px;
+     line-height: 31px;
+ }
+ .ryt_recpt_contnt ul li h3 {
+     font-size: 18px;
+     font-weight: bold;
+ }
+ .ryt_recpt_contnt ul li:Last-child h3, .ryt_recpt_contnt ul li:Last-child h3 span{
+     color: #3b73ba;
+     font-size: 22px;
+ }
+ .ryt_recpt_contnt ul {
+     margin-top: 30px;
+ }
+  #view_recpt_modal button.close {
+     opacity: 1;
+     margin-right: 10px;
+     margin-top: 6px;
+     font-size: 33px;
+ }
+ .dwnld_recipt {
+     margin-top: 40px;
+ }
+ .dwnld_recipt .btn {
+     max-width: 300px;
+     width: 100%;
+     padding: 10px;
+     color: #fff;
+        font-family: 'Avenir Next LT Pro';
+     font-weight: 500;
+     font-size: 18px;
+     border-radius: 50px;
+ }
+ .ryt_recpt_contnt {
+     padding: 0px 20px;
+ }
+ .purchase_history .inner_table_listng table button {
+    max-width: 250px;
+}
+.success_btns{
+    background-color: #30beee;
+color: #fff;
+margin-top: 41px;
+font-size: 20px;
+padding: 9px 33px;
+}
+.music_wavesarea
+{
+    display: inline-block;
+    position: relative;
+    padding: 0 75px;
+}
+.music_start_time, .music_end_time
+{
+    display: inline-block;
+    vertical-align: middle;
+    color: #000;
+    font-size: 14px;
+    position: absolute;
+    top: 17px;
+}
+.music_start_time
+{
+    left: 25px;
+}
+.music_end_time
+{
+    right: 25px;
+}
+.music_waves
+{
+    position: relative;
+}
+.active_wave
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.active_wave img {
+    max-width: inherit;
+}
+
+#vol-control {
+	display: inline-block;
+	width: 100px;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+#myplayer{
+    display: none
+}
+.dashbord_inner {
+    background-color: #2f5696;
+    padding: 15px;
+    overflow: hidden;
+}
+.dashbord_inner i {
+    float: left;
+    color: #FFF;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+}
+.dashbord_inner .info {
+    float: left;
+    width: auto;
+    margin-left: 10px;
+}
+.dashbord_inner .info h3 {
+    margin: 5px 0 5px;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+}
+.dashbord_inner .info p {
+    color: #fff;
+}
+.success_message{
+    text-align: center;
+color: #2fc1f2;
+}
+.signup_completed .modal-dialog{
+    max-width: 490px;
+}
+.btn.disable_btn {
+    background: #888;
+}
+.innre_listng.license_song ul li {
+    background-color: #fff;
+    box-shadow: 4px 0px 10px rgba(0,0,0,0.10);
+    padding: 25px 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.navbar-brand img {
+    max-height: 39px;
+}
+.topselect{margin-top: 5px;
+    text-align: center;}
+    .music_waves input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .music_waves img {
+        margin: 0 !important;
+        opacity: 1 !important;
+    }
+
+    table.fold-table .fold {
+        display: none;
+    }
+    table.fold-table .fold.open {
+        display: table-row;
+    }
+    /* dragdrop css */
+    .handle {
+        
+        width: 200px;
+        height: 200px;
+        right: 0;
+        top: 10;
+        background-color: #9E9E9E;
+        border-left: 2px dotted red;
+      }
+      
+      
+      /* drag drop end */
+ @media(max-width:767px){
+ div#view_recpt_modal .modal-dialog {
+     margin: 0px auto;
+     max-width: 400px;
+ }
+ .left_recpt_contnt ul li h4 {
+     font-size: 18px;
+ }
+ .left_recpt_contnt ul li p {
+     font-size: 14px;
+ }
+ .left_recpt_contnt ul li {
+     padding: 15px;
+ }
+ .ryt_recpt_contnt {
+     padding: 20px 20px 40px 20px;
+ }
+ }
+@media(min-width:768px) {
+    #page-wrapper {
+        position: inherit;
+        margin: 0 0 0 250px;
+        padding: 0 30px;
+        border-left: 1px solid #e7e7e7;
+    }
+
+    
+
+
+}
+
+.navbar-top-links {
+    margin-right: 0;
+}
+
+.navbar-top-links li {
+    display: inline-block;
+}
+
+.navbar-top-links li:last-child {
+    margin-right: 15px;
+}
+
+.navbar-top-links li a {
+    padding: 15px;
+    min-height: 50px;
+	color: #fff
+}
+ ul.nav.navbar-top-links.navbar-right li.dropdown a.dropdown-toggle:hover,  ul.nav.navbar-top-links.navbar-right li.dropdown a.dropdown-toggle:focus{
+    background: #2f5696;
+}
+.navbar-top-links .dropdown-menu li {
+    display: block;
+}
+
+.navbar-top-links .dropdown-menu li:last-child {
+    margin-right: 0;
+}
+
+.navbar-top-links .dropdown-menu li a {
+    padding: 6px 20px;
+    min-height: 0;
+}
+
+.navbar-top-links .dropdown-menu li a div {
+    white-space: normal;
+}
+
+.navbar-top-links .dropdown-messages,
+.navbar-top-links .dropdown-tasks,
+.navbar-top-links .dropdown-alerts {
+    width: 310px;
+    min-width: 0;
+}
+
+.navbar-top-links .dropdown-messages {
+    margin-left: 5px;
+}
+
+.navbar-top-links .dropdown-tasks {
+    margin-left: -59px;
+}
+
+.navbar-top-links .dropdown-alerts {
+    margin-left: -123px;
+}
+
+.navbar-top-links .dropdown-user {
+    right: 0;
+    left: auto;
+}
+
+.sidebar .sidebar-nav.navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.sidebar .sidebar-search {
+    padding: 15px;
+}
+
+.sidebar ul li {
+    border-left: 5px solid #2f5696;
+    width:100%;
+}
+
+.sidebar ul li a.active {
+    background-color: #eee;
+}
+
+.sidebar .arrow {
+    float: right;
+}
+
+.sidebar .fa.arrow:before {
+    content: "\f104";
+}
+
+.sidebar .active>a>.fa.arrow:before {
+    content: "\f107";
+}
+
+.sidebar .nav-second-level li,
+.sidebar .nav-third-level li {
+    border-bottom: 0!important;
+}
+
+.sidebar .nav-second-level li a {
+    padding-left: 37px;
+}
+
+.sidebar .nav-third-level li a {
+    padding-left: 52px;
+}
+.navbar-top-links li:last-child {
+    margin-right: 15px;
+    float: right;
+}
+.navbar-top-links .dropdown-menu li:last-child {
+    width: 100%;
+}
+@media(min-width:768px) {
+    .sidebar {
+        z-index: 1;
+        position: absolute;
+        width: 250px;
+        margin-top: 51px;
+    }
+
+    .navbar-top-links .dropdown-messages,
+    .navbar-top-links .dropdown-tasks,
+    .navbar-top-links .dropdown-alerts {
+        margin-left: auto;
+    }
+}
+#page-wrapper ul.dropdown-menu.dropdown-user li a, ul.dropdown-menu.dropdown-user li a {
+    color: #000;
+}
+#wrapper .navbar-default.sidebar ul li a:hover{
+	background:transparent;
+	color:#fff;
+}
+#wrapper .navbar-default.sidebar ul li:hover{
+    border-left: 5px solid #fff;
+}
+
+#wrapper button.navbar-toggle {
+    background: #fff;
+}
+#wrapper nav.navbar.navbar-default.navbar-static-top a.navbar-brand img {
+    width: 250px;
+    margin-top: -9px;
+}
+div#page-wrapper {
+    padding-top: 85px;
+}
+.user_table table tbody tr td {
+    border-top: 1px solid rgba(0,0,0,0.08);
+    color: #000;
+    font-size: 14px;
+	padding: 15px;
+}
+.user_table table thead tr th {
+    font-size: 16px;
+    padding: 15px;
+	border-bottom: 2px solid rgba(0,0,0,0.08);
+}
+.user_table {
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.10);
+    box-shadow: 2px 3px 6px rgba(0,0,0,0.05);
+    border-radius: 4px;
+}
+
+.user_table h3 {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    margin: 0px;
+    border-bottom: 1px solid rgba(0,0,0,0.10);
+    background-color: #2f5696;
+    color: #fff;
+}
+#wrapper .sidebar ul li.sidebar-search:hover {
+    border-left:5px solid #2f5696;
+}
+.user_table button.action {
+    background-color: #ddd;
+    border: unset;
+    font-size: 16px;
+    padding: 10px;
+    text-align: left;
+    max-width: 156px;
+    width: 100%;
+	position:relative;
+}
+.user_table button.action span.caret {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+.user_table.user-form {
+    padding: 0px 0px 30px 0px;
+}
+.user_table.user-form input, .song_form_inner select{
+	border: 2px solid #e1e1e1;
+    height: 56px;
+    border-radius: 5px;
+    box-shadow: unset;
+    font-size: 18px;
+    color: rgba(0,0,0,0.50);
+}
+.btn_submt_new .btn_admn {
+    margin: 10px 0px;
+    background-color: #3c68b2;
+    max-width: 200px;
+    display: block;
+    color: #fff;
+    border-radius: 50px;
+    padding: 13px 12px;
+    font-size: 20px;
+    box-shadow: 5px 0px 10px rgba(60,105,179,0.15);
+    text-transform: uppercase;
+    width: 100%;
+	font-family: 'Avenir Next LT Pro';
+}
+.user_table.user-form label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    width: 100%;
+    font-family: 'Avenir Next LT Pro';
+    color: #000;
+}
+.user-form {
+    float: left;
+    width: 100%;
+    padding-top: 20px;
+}
+#wrapper .navbar-header {
+    width: auto;
+}
+#wrapper .dropdown-toggle::after{
+    display: none;
+}
+h3 a {
+    color: #fff;
+    float: right;
+}
+.mybutton{
+        float: right;
+        padding-bottom: 24px !important;
+        margin: -64px !important;
+        margin-right: 10px !important;
+        padding: 9px !important;
+        margin-top: -46px !important;
+        border: 1px aliceblue;
+        border: 1px solid;
+}
+.my_loader{
+    display: none;
+}
+.loading_img {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 99999;
+}
+.loading_img img {
+    width: 50px;
+}
+.loading_img h3 {
+    font-weight: bold;
+    color: #fff;
+    font-size: 18px
+}
+.loader_txt{
+position: absolute;
+top: 50%;
+left: 0px;
+right: 0px;
+margin: 0 auto;
+}
+.loader_overly {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.60);
+    z-index: 99;
+    overflow: hidden;
+}
+/* 13-9-2019 */
+.btn_dlt_car.hert_like {
+    cursor: pointer;
+}
+.btn_dlt_car.hert_like .heart {
+    font-size: 25px;
+        color: #333;;
+}
+
+
+.player_loader {
+   
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding-top:9px;
+}
+
+.player_loader img {
+    height: 37px;
+    position: relative;
+    z-index: 999;
+}
+.player_loader h3 {
+    display: inline-block;
+    position: relative;
+    z-index: 999;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.player_loader .loader_overly {
+    position: absolute;
+    background: #fff;
+    opacity: 0.8;
+}
+.btn_dlt_car.hert_like i.heart.fa.fa-heart {
+   background: linear-gradient(to right, #2fc3f2 40%, #3c68b2 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.rating { 
+  border: none;
+  width:100%;
+}
+
+.rating input { display: none; } 
+.rating label:before { 
+  margin: 5px;
+  font-size: 20px;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating label { 
+  color: #ddd; 
+ float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) label:hover, /* hover current star */
+.rating:not(:checked) label:hover ~ label { color: #fec919;  } /* hover previous stars in list */
+
+.rating input:checked + label:hover, /* hover current star when changing rating */
+.rating input:checked ~ label:hover,
+.rating label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating input:checked ~ label:hover ~ label { color: #FFED85;  } 
+div#rating_pop .modal-dialog {
+    max-width: 400px;
+    width: 100%;
+    margin: 40px auto;
+}
+div#rating_pop .modal-content {
+    padding: 30px;
+	position: relative;
+}
+div#rating_pop .modal-content h2 {
+    font-family: 'Avenir Next LT Pro';
+    margin-top: 0px;
+    background: linear-gradient(to right, #2fc3f2 40%, #3c68b2 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 36px;
+}
+div#rating_pop .modal-content p {
+    font-family: 'Avenir Next LT Pro';
+    max-width: 90%;
+    margin: 15px auto 20px auto;
+    font-size: 18px;
+    line-height: 28px;
+}
+div#rating_pop .modal-body {
+    padding: 0px;
+}
+div#rating_pop button.close {
+    position: absolute;
+    right: -16px;
+    top: -27px;
+    font-size: 45px;
+}
+
+
+
+
+
+
+div#rating_pops1 .modal-dialog {
+    max-width: 400px;
+    width: 100%;
+    margin: 40px auto;
+}
+div#rating_pops1 .modal-content {
+    padding: 30px;
+	position: relative;
+}
+div#rating_pops1 .modal-content h2 {
+    font-family: 'Avenir Next LT Pro';
+    margin-top: 0px;
+    background: linear-gradient(to right, #2fc3f2 40%, #3c68b2 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 36px;
+}
+div#rating_pops1 .modal-content p {
+    font-family: 'Avenir Next LT Pro';
+    max-width: 90%;
+    margin: 15px auto 20px auto;
+    font-size: 18px;
+    line-height: 28px;
+}
+div#rating_pops1 .modal-body {
+    padding: 0px;
+}
+div#rating_pops1 button.close {
+    position: absolute;
+    right: -16px;
+    top: -27px;
+    font-size: 45px;
+}
+.disable_class{
+    position: 'absolute';
+    width: '100%';
+    height: '100%';
+   
+    left: 0;
+    z-index: 10000;
+}
+
+div#rating_pops1 .btn_submt {
+    max-width: 300px;
+    width: 100%;
+    display: block;
+    margin: 20px auto 0px auto;
+	    font-size: 14px;
+    padding: 10px 24px;
+    text-align: center;
+    background: #2fc3f2;
+ 
+    background: -moz-linear-gradient((left, #2fc3f2 0%, #3c68b2) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #2fc3f2), color-stop(100%, #3c68b2));
+    background: -webkit-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -o-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -ms-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: linear-gradient(to right, #2fc3f2 0%, #3c68b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #2fc3f2', endColorstr='#3c68b2', GradientType=1 );
+	color:#fff;
+	border-radius: 50px;
+	box-shadow: 5px 0px 10px rgba(60,105,179,0.15);
+    text-transform: uppercase;
+}
+div#rating_pop .btn_submt {
+    max-width: 300px;
+    width: 100%;
+    display: block;
+    margin: 20px auto 0px auto;
+	    font-size: 14px;
+    padding: 10px 24px;
+    text-align: center;
+    background: #2fc3f2;
+ 
+    background: -moz-linear-gradient((left, #2fc3f2 0%, #3c68b2) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #2fc3f2), color-stop(100%, #3c68b2));
+    background: -webkit-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -o-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: -ms-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+    background: linear-gradient(to right, #2fc3f2 0%, #3c68b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #2fc3f2', endColorstr='#3c68b2', GradientType=1 );
+	color:#fff;
+	border-radius: 50px;
+	box-shadow: 5px 0px 10px rgba(60,105,179,0.15);
+    text-transform: uppercase;
+}
+fieldset.rating {
+    position: absolute;
+    left: -54%;
+    right: 0px;
+    margin: 0 auto;
+}
+.star_rtng {
+    position: relative;
+    height: 45px;
+}
+div#personl_playlist .modal-dialog {
+    left: 0px;
+    right: unset;
+}
+.playlist_pop.fade.show {
+    opacity: 1;
+}
+.inner_form.song_form_inner {
+    max-width: 100%;
+}
+.song_form_inner .multi_select {
+    margin: 0px;
+}
+.song_form_inner .multi_select .css-yk16xz-control, .song_form_inner .multi_select .css-1hwfws3 {
+    height: 56px;
+}
+.song_form_inner #imageUpload {
+    width: 100%;
+}
+div#myModalplay {
+    padding-right: 0px!important;
+}
+.model-openplay{
+    overflow: hidden!important;
+}
+.seach_bar>div{
+    display: unset!important;
+}
+ .seach_bar input {
+    width: 100%;
+}
+.seach_bar>div>div {
+    z-index:9999;
+}
+.seach_bar>div>div div{
+    font-size: 18px;
+    padding:10px 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.10);
+}
+.summry_cart ul li:nth-child h3 span {
+    line-height: 21px;
+}
+.Myautocomlpte
+{
+    position:absolute !important;
+    left:0  !important;
+    top:100%  !important;
+    width: 100%  !important;
+    max-height: 500px !important;
+    padding:0 !important;
+}
+
+
+
+#volume_control {
+	min-width: 16px;
+}
+.song_name_player {
+	display: inline-block;
+	max-width: 200px;
+	min-width: 200px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+#rating_pop {
+    z-index: 99999999;
+}
+.crop-container {
+	position: relative;
+	width: 500px;
+	height: 356px;
+	margin: 0 auto;
+}
+.crop_btn{
+    padding-bottom: 20px
+}
+.tableplayer.disabled {
+    pointer-events: none;
+}
+#adv{
+    display: none;
+}
+.song_form_inner .form-group span {
+    color: #F20000;
+    position: absolute;
+    font-size: 13px;
+    bottom: -18px;
+}
+
+.song_form_inner .form-group{
+    position: relative;
+}
+.crop_btn.pop_btn ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.crop_btn.pop_btn ul li button{
+    background: -webkit-gradient(left top, right top, color-stop(0%, #2fc3f2), color-stop(100%, #3c68b2));
+    background: linear-gradient(to right, #2fc3f2 0%, #3c68b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #2fc3f2', endColorstr='#3c68b2', GradientType=1 );
+    max-width: 257px;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    border-radius: 50px;
+    padding: 13px 56px;
+    font-size: 16px;
+    box-shadow: 5px 0px 10px rgba(60,105,179,0.15);
+    text-transform: uppercase;
+    border: unset;
+    width: 100%;
+    cursor: pointer;
+}
+
+.crop_btn.pop_btn {
+	text-align: center;
+}
+
+#success_message {
+    font-size: 16px;
+}
+
+
+
+
+/* The container */
+.container_radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+.custom_radio {
+    margin-top: 8px;
+    display: inline-block;
+    margin-right: 30px;
+}
+ 
+.filter_box {
+	padding: 13px 0;
+}
+  /* Hide the browser's default radio button */
+  .container_radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container_radio:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container_radio input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container_radio input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container_radio .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+.search input {
+	width: 100%;
+	padding: 5px;
+}
+
+
+.history_list table tbody .btn.view_rec{
+    margin: inherit;
+    max-width: 170px;
+    padding: 10px 0;
+}
+
+.home_lic .license_song li {
+    position: relative;
+    padding-left: 80px !important;
+    padding-right: 50px !important;
+}
+
+.home_lic .license_song li h4 img {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+}
+
+
+
+.signup_completed .modal-body h4 {
+	padding: 0px !important;
+}
+.signup_completed .success_btns{
+    margin-top: 14px !important;
+}
+
+.song_name{
+    position: relative;
+}
+#back_btn{
+    background: #fff;
+    color: #3882c5;
+    border: 2px solid;
+
+
+}
+.summry_cart ul li p {
+	padding: 6px 0 0 10px;
+	margin: 0;
+	color: #555;
+}
+
+.summry_cart ul li p span {
+	float: right;
+}
+.music_waves {
+    position: relative;
+    min-width: 416px;
+}  
+
+
+.oinner_puchs_tbl.tableresponsive .table tr th, .oinner_puchs_tbl.tableresponsive .table tr td {
+
+    width: auto;
+    text-align: left;
+
+}
+@media (max-width:1585px){
+	.membr_text {
+		padding-top: 88px;
+	}
+	.palylst_cntnt {
+		margin-top: 90px;
+	}
+	.palylst_cntnt h3 {
+		font-size: 30px;
+	}
+}
+@media (max-width:1570px){
+	.inner_exprtn select {
+		width: 46%;
+	}
+	.save_optn h1 {
+		font-size: 24px;
+	}
+	.save_optn h4 {
+		font-size: 18px;
+	}
+}
+@media (max-width:1553px){
+	.membr_text ul li {
+		width: 29%;
+	}
+	.membr_text {
+		padding-top: 75px;
+	}
+	section.membr_sctn .haedg p {
+		max-width: 80%;
+	}
+	.summry_btns .btn {
+		width: 46%;
+		text-align: center;
+		padding: 12px 20px;
+	}
+	div#change_status .modal-dialog {
+		margin-top: 200px;
+	}
+}
+@media (max-width:1459px){
+	section.membr_sctn .haedg p {
+		max-width: 90%;
+	}
+	.membr_text {
+		padding-top: 40px;
+	}
+	.summry_btns .btn {
+		width: 100%;
+		margin: 20px auto;
+		display: block;
+	}
+}
+@media (max-width:1339px){
+	.membr_text {
+		padding-top: 20px;
+	}
+	.btn_join {
+		margin-top: 35px;
+	}
+	.plans_popup .modal-dialog {
+		max-width: 1200px;
+	}
+	.plans_popup .pricng {
+		padding: 0px 30px 50px 30px;
+	}
+	.save_optn h1 {
+		font-size: 18px;
+	}
+	.save_optn h4 {
+		font-size: 16px;
+	}
+}
+@media (max-width:1299px){
+	section.membr_sctn .haedg p {
+		max-width: 94%;
+		font-size: 16px;
+	}
+	.membr_text ul {
+		max-width: 100%;
+	}
+	.plans_popup .modal-dialog {
+		max-width: 1100px;
+	}
+	.plans_popup .prcing_outr ul {
+		padding: 0px 24px 40px;
+	}
+	.plans_popup .prcing_outr li span {
+		font-size: 14px;
+	}
+	.plans_popup .prcing_outr>p {
+		font-size: 16px;
+	}
+	.plans_popup .price_headg h1 {
+		font-size: 34px;
+	}
+	.summry_cart ul li:nth-child(1) h3 img, .summry_cart ul li:nth-child(2) h3 img {
+		margin-right: 5px;
+		width: 40px;
+	}
+	.summry_cart ul li h5, .summry_cart ul li h3 {
+		font-size: 16px;
+	}
+	.summry_cart ul li:nth-child(1) h3 span, .summry_cart ul li:nth-child(2) h3 span {
+		line-height: 44px;
+	}
+}
+@media (max-width:1199px){
+	section.features_sctn {
+		padding-bottom: 0px;
+    }
+    
+    section.play_song table tbody tr td img {
+        width: auto;
+    }
+    
+   
+#time img {
+	width: auto;
+}
+	.membr_text ul li div {
+		height: 140px;
+	}
+	.membr_text ul li img {
+		padding-top: 33px;
+		width: 50px;
+	}
+	.haedg {
+		margin-bottom: 30px;
+	}
+	.membr_text ul li h4 {
+		margin: 10px auto 0px auto;
+		font-size: 16px;
+		line-height: 23px;
+	}
+	.membr_text {
+		padding-top: 10px;
+	}
+	.faeture_inner {
+		left: 30%;
+	}	
+	.features_outr.odd_feat img {
+		max-width: 60%;
+	}
+	header.main_header ul.nav.navbar-nav li a {
+		padding: 10px 12px;
+	}
+	header.main_header ul.nav.navbar-nav {
+		margin-top: 16px;
+	}
+	header.main_header ul.nav.navbar-nav li:last-child a {
+		margin-top: -1px;
+        margin-left: 10px;
+        cursor: pointer;
+	}
+	.prcing_outr ul {
+		padding: 0px 12px 40px;
+	}
+	.prcing_outr>p {
+		font-size: 16px;
+		line-height: 23px;
+		height: 100px;
+	}
+	.price_headg h1 span {
+		font-size: 20px;
+	}
+	.price_headg h1 {
+		font-size: 30px;
+	}
+	.banner_cntnt h1 {
+		max-width: 100%;
+	}
+	.inner_table_listng table th, .inner_table_listng table tbody td {
+		font-size: 14px;
+	}
+	.plans_popup .modal-dialog {
+		max-width: 1055px;
+	}
+	.plans_popup {
+		padding: 0px 40px!important;
+	}
+	.plans_popup .prcing_outr ul {
+		padding: 0px 12px 40px;
+	}
+	.profle_chng {
+		max-width: 100%;
+	}
+	.profle_chng .avatar-upload .avatar-preview > div {
+		width: 350px;
+		height: 350px;
+		margin: 0 auto;
+	}
+	.profle_chng .avatar-upload .avatar-edit input + label {
+		width: 60px;
+		height: 60px;
+	}
+	header.inner_head ul.navbar-nav li a span {
+		top: 10px;
+	}
+	.pay_optn h4 label {
+		font-size: 16px;
+		margin-bottom: 0px;
+		padding-left: 40px;
+	}
+	.container1 .checkmark {
+		width: 30px;
+		height: 30px;
+		background-size: contain;
+	}
+	.pay_optn .panel-heading {
+		padding: 15px 8px;
+	}	
+	.gen_type ul li {
+		width: auto;
+	}
+	.gen_type ul li .btn {
+		padding: 6px 20px;
+	}
+	.inner_table_listng table tbody td img, .oinner_puchs_tbl table tbody td img {
+		margin-right: 8px;
+		width: 40px;
+	}
+	.price_table table tbody td img {
+		margin-right: 8px;
+		width: unset;
+	}
+	.faq_lft h4.panel-title {
+		font-size: 16px;
+		line-height: 26px;
+	}
+	.faq_lft p {
+		font-size: 14px;
+	}
+	.faq_lft .panel-body {
+		margin-left: 42px;
+		max-width: 100%;
+		padding: 10px 14px;
+	}
+	.faq_lft i {
+		width: 40px;
+		height: 40px;
+		padding: 12px 14px;
+		font-size: 16px;
+		margin-right: 14px;
+	}
+	.abut_lft p {
+		font-size: 14px;
+		line-height: 22px;
+	}
+	.timer_inner h4 {
+		font-size: 24px;
+	}
+	.timer_inner h3 {
+		font-size: 34px;
+	}
+	
+}
+@media (max-width:1069px){
+	.membr_text ul li div {
+		height: 110px;
+	}
+	.membr_text ul li img {
+		padding-top: 35px;
+		height: 70px;
+		width: unset;
+	}
+	.prcing_outr ul li img {
+		margin-right: 7px;
+		width: 22px;
+	}	
+}
+@media (max-width:1023px){
+	.banner_cntnt p {
+		max-width: 100%;
+	}
+	.plans_popup .prcing_outr ul {
+		padding: 0px 8px 40px;
+	}
+	.plans_popup .price_headg h1 {
+		font-size: 26px;
+	}
+}
+@media (max-width:991px){
+	.btn_join {
+		float: left;
+		width: 100%;
+	}
+	.play_sctn a h3 {
+		font-size: 20px;
+		margin: 15px 0px 20px 0px;
+	}
+	section.features_sctn {
+		padding-bottom: 0px;
+	}
+	.features_outr.odd_feat img {
+		max-width: 69%;
+	}
+	.haedg p {
+		font-size: 16px;
+		max-width: 98%;
+	}
+	section.membr_sctn {
+		padding-bottom: 60px;
+	}
+	.membr_text {
+		padding-top: 30px;	
+	}
+	section.footer_sctn h4 {
+		font-size: 20px;
+	}
+	section.footer_sctn h3 {
+		font-size: 24px;
+	}
+	header.main_header ul.nav.navbar-nav li a {
+		padding: 10px 8px;
+		font-size: 12px;
+	}
+	header.main_header .navbar-brand {
+		height: auto;
+        padding: 15px 0px ;
+	}
+	header.main_header .navbar-brand img {
+		width: 150px;
+		margin-top: 9px;
+    }
+    
+	.prcing_outr {
+		margin-bottom: 30px;
+	}
+	.banner_cntnt h1 {
+		font-size: 40px;
+		line-height: 51px;
+	}
+	.banner_cntnt h2 {
+		font-size: 24px;
+		margin-bottom: 12px;
+	}
+	.banner_listg_headg h3 {
+		font-size: 20px;
+	}
+	.banner_listg_headg span a, .innre_listng ul li h4 {
+		font-size: 16px;
+	}
+	.innre_listng ul li h4 img {
+		margin-right: 10px;
+		width: 40px;
+	}
+	.innre_listng ul li {
+		padding: 15px 100px 15px 55px;
+	}
+	.innre_listng ul li .btn {
+		top: 9px;
+		right: 8px;
+	}
+	.banner_cntnt h1 {
+		margin-bottom: 36px;
+	}
+	.banner_cntnt h1::after {
+		height: 2px;
+		bottom: -15px;
+	}
+	.palylst_cntnt {
+		margin-top: 80px;
+	}
+	.seach_bar input {
+		background-position: 96.3% 52%;
+	}
+	.palylst_cntnt h5 {
+		font-size: 16px;
+		margin: 5px 0px 0px 0px;
+	}
+	.palylst_cntnt h3 {
+		font-size: 24px;
+		margin: 10px 0px 0px 0px;
+	}
+	.palylst_cntnt h4 {
+		font-size: 22px;
+		margin-bottom: 0px;
+	}
+	.seach_bar {
+		margin-top: 10px;
+	}
+	/* .inner_table_listng table.table {
+		min-width: 800px;
+	} */
+	.price_headg img {
+		width: 100%;
+	}
+	.pricbg_inner {
+		margin-bottom: 50px;
+	}
+	.pricbg_inner .btn {
+		max-width: 205px;
+		margin-top:35px;
+	}
+	.plans_popup .pricng {
+		padding: 0px 30px 0px 30px;
+	}
+	.form_inner label, .billng_info label, .pay_optn label {
+		font-size: 16px;
+		margin-bottom: 5px;
+	}
+	.form_inner .form-group {
+		margin-bottom: 15px;
+	}
+	.form_inner input, .form_inner select, .billng_info input {
+		height: 46px;
+		font-size: 14px;
+	}
+	.form_inner select {
+		background-size: 17px;
+	}
+	.profle_chng {
+		margin: 0 auto;
+		margin-bottom: 50px;
+	}
+	.user_biodata {
+		margin-top: 30px;
+	}
+	.user_biodata h2 {
+		margin-bottom: 5px;
+	}
+	.user_biodata h3 {
+		margin-top: 0px;
+	}
+	.profie_bnner .avatar-upload .avatar-edit {
+		bottom:unset;
+		top: 20px;
+	}
+	.billng_info {
+		max-width: 100%;
+	}
+	.billng_info::after{
+		display:none;
+	}
+	.billng_info1 {
+		margin-left: 0px;
+		max-width: 100%;
+	}
+	.summry_cart {
+		margin-top: 25px;
+		min-height: unset;
+	}
+	.profle_chng .avatar-upload .avatar-edit {
+		right: 0px;
+		left: 67%;
+	}
+	.faq_right, .abut_right {
+		text-align: center;
+		margin-top: 30px;
+	}
+	section.play_song table tbody tr td img {
+		max-width: unset;
+		width: unset;
+	}
+	.faeture_inner {
+		background-size: cover;
+    }
+   
+}
+@media (max-width:767px){
+    .rating2{display: none;}
+    .player_table .table-responsive{overflow: unset;}
+    .player_table .table-responsive .table tbody tr td{white-space: unset;}
+	.membr_text ul {
+		max-width: 40%;
+	}
+	.membr_text ul li {
+		width: 100%;
+		margin-right: 0px;
+		margin-bottom: 30px;
+	}
+	.membr_text ul li div {
+		height: 200px;
+	}
+	.membr_text ul li img {
+		padding-top: 55px;
+		height: unset;
+	}	
+	.faeture_inner {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		min-height: auto;
+		background-size: auto;
+		left: 0px;
+		right: 0px;
+	}
+	.features_outr.odd_feat h3, .features_outr.odd_feat p, .features_outr.odd_feat h5{
+		text-align: center;
+	}
+	.features_outr.odd_feat p {
+		padding-left: 0px;
+	}
+	.features_outr {
+		margin-bottom: 30px;
+		    text-align: center;
+	}	
+	section.features_sctn .haedg {
+		margin-bottom: 50px;
+	}
+	.features_outr h3 {
+		font-size: 24px;
+		margin-bottom: 15px;
+	}
+	.features_outr p, .features_outr.odd_feat p{
+		max-width: 100%;
+	}
+	header.main_header .navbar-toggle span.icon-bar {
+		background: rgba(91,164,65,1);
+		background: -moz-linear-gradient(left, #2fc3f2 0%, #3c68b2) 100%;
+		background: -webkit-gradient(left top, right top, color-stop(0%, #2fc3f2), color-stop(100%, #3c68b2));
+		background: -webkit-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+		background: -o-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+		background: -ms-linear-gradient(left, #2fc3f2 0%, #3c68b2 100%);
+		background: linear-gradient(to right, #2fc3f2 0%, #3c68b2 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #2fc3f2', endColorstr='#3c68b2', GradientType=1 );
+	}
+	header.main_header button.navbar-toggle {
+		border: 1px solid #3a70b8;
+		margin-top: 18px;	
+	}
+	div#myNavbar {
+		margin-top: 14px;
+		background-color: #f7f7f7;
+		    padding: 0px;
+	}
+	header.main_header.shrink div#myNavbar {
+		margin-top: 11px;
+	}
+	div#myNavbar ul.nav.navbar-nav {
+		float: left;
+		width: 100%;
+		margin: 0px;
+		padding: 20px;
+	}
+	header.main_header.header .container, header.main_header.header .container-fluid {
+		padding: 0px;
+	}
+	header.main_header .navbar-brand img {
+		width: unset;
+	}
+	header.main_header .navbar-brand {
+		padding-left: 17px;
+		margin-top: -8px;
+	}
+	.prcing_outr {
+		max-width: 350px;
+		margin: 0 auto 30px auto;
+		width: 100%;
+		position: relative;
+	}
+	.price_headg>div {
+		left: 30px;
+	}
+	section.footer_sctn h4 {
+		font-size: 18px;
+		max-width: 100%;	
+	}		
+	section.footer_sctn h3 {
+		font-size: 22px;
+	}
+	section.footer_sctn h5 {
+		font-size: 20px;
+	}	
+	.banner_cntnt {
+		margin-bottom: 60px;
+		text-align: center;
+	}	
+	.banner_cntnt button.btn {
+		margin: 30px auto;
+	}
+	.banner_cntnt h1::after{
+		display:none;
+	}	
+	.palylst_cntnt, .playlist_img{
+		
+		text-align: center;
+	}
+	.playlist_img .btn {
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+	.palylst_cntnt {
+		margin-top: 50px;
+	}
+	.palylst_cntnt h5 {
+		font-size: 16px;
+		line-height: 22px;
+	}
+	.seach_bar {
+		margin-top: 20px;
+	}
+	.plans_popup .modal-dialog {
+		max-width: 500px;
+	}
+	.plans_popup h4 {
+		font-size: 28px;
+		padding-bottom: 30px;
+	}
+	.plans_popup .modal-header {
+		padding: 10px;
+	}
+	.plans_popup .close img {
+		width: 40px;
+	}
+	.plans_popup .close {
+		right: -22px;
+		top: -28px;
+	}
+	.table-responsive{
+		border:unset!important;
+	}
+	.oinner_puchs_tbl table{
+		width:600px;
+	}
+	.price_table table {
+		width: 100%;
+	}
+	header.inner_head ul.navbar-nav li a span {
+		left: 70px;
+		right: unset;
+	}
+	.timer_inner {
+		margin-bottom: 40px;
+	}
+	.chng_status ul li .btn {
+		font-size: 16px;
+		line-height: 36px;
+	}
+	.chng_status ul li:nth-child(1) {
+		margin-right: 20px;
+	}
+	.chng_status ul li {
+		max-width: 230px;
+	}
+	.chng_status h5 {
+		font-size: 18px;
+	}
+	.plans_popup h4 {
+		font-size: 24px;
+		padding-bottom: 10px;
+	}
+	section.play_song .table-responsive {
+		margin-bottom: 0px;
+	}
+	header.main_header.shrink {
+		position: unset;
+	}
+	.faeture_inner {
+		position: relative;
+		max-width: 469px;
+		border-radius: unset!important;
+	}
+	.features_outr.odd_feat img {
+		float: unset;
+		max-width: 100%;
+		width: auto;
+	}	
+	img.click_me {
+		width: 40px;
+		height: 40px;
+	}
+	.right_profle .plan_tabl table th, .right_profle .plan_tabl table td {
+		display: block;
+	}
+	.banner_cntnt .btn {
+    margin: 40px auto;
+	}
+	.playlist_img a.btn.close {
+		width: 100%;
+		display: block;
+		max-width: 300px;
+		margin: 0 auto 30px auto;
+		float: unset;
+	}
+	.modal.right .summry_btns a.btn {
+		display: block;
+		width: 100%;
+        float: unset;
+      
+    }
+    #wrapper .navbar-default.sidebar {
+		height: auto;
+	}
+	div#page-wrapper {
+		padding-top: 130px;
+	}
+	.user_table table{
+		min-width:900px;
+	}
+	.user_table .table-responsive {
+		overflow: auto;
+	}
+	.user_table.user-form input {
+		height: 45px;
+		font-size: 16px;
+    }
+    .singer_title{width: auto; height: 60px;}
+     .singer_title p{padding-left: 65px;}
+     section.play_song tbody td:nth-child(1) img {
+        width: 50px;
+        height: 50px;
+      
+    }
+    .risponsive_row {
+        display: table-row;
+    }
+    .playlist_pop .innre_listng ul li a img
+    {
+        width: 50px;
+        height: 50px;
+    }
+    .playlist_pop .innre_listng ul li a
+    {
+        padding: 21px 21px 21px 70px;
+    }
+   
+}
+@media (max-width:599px){
+	.membr_text ul {
+		max-width: 65%;
+	}
+	.bottom_link ul li a {
+		font-size: 16px;
+	}
+	.bottom_link ul li a i {
+		font-size: 28px;
+	}
+	.plans_popup .pricng {
+		padding: 0px 10px 0px 10px;
+	}
+	.plans_popup .prcing_outr>p {
+		height: unset;
+		margin-bottom: 30px;
+	}
+	.forgt_icon h5 {
+		font-size: 16px;
+		max-width: 100%;
+		margin: 20px auto 20px auto;
+	}
+	.accunt_btn .btn {
+		font-size: 16px;
+	}
+	.currnt_subs ul li .btn {
+		position: unset;
+		width: 100%;
+		max-width: 100%;
+	}
+	.profle_chng .avatar-upload .avatar-preview > div {
+		width: 200px;
+		height: 200px;
+	}
+	.upld_ims {
+		margin-top: -160px;
+	}
+	.profle_chng .avatar-upload .avatar-edit {
+		bottom: 0px;
+	}
+	.recmnd_sctn h2 {
+		font-size: 26px;
+		max-width: 80%;
+		margin: 0 auto;
+	}
+	.profie_bnner .avatar-upload .avatar-preview {
+		height: 300px;
+	}
+	.billng_info1 {
+		padding: 30px 5px;
+	}
+	.profle_chng .avatar-upload .avatar-edit {
+		right: 0px;
+		left: 59%;
+	}
+	.chng_status ul li {
+		max-width: 100%;
+	}	
+	.chng_status ul li:nth-child(1) {
+		margin-right: 0px;
+		margin-bottom: 20px;
+	}
+	.chng_status h5 {
+		font-size: 16px;
+		line-height: 23px;
+		max-width: 90%;
+		margin: 0 auto;
+	}
+}
+@media (max-width:499px){
+	.search_bar .btn {
+		padding: 11px 32px;
+		font-size: 18px;
+	}
+	.search_bar input[type="email"] {
+		padding: 11px 20px;
+		font-size: 16px;
+	}
+	.logo_img img {
+		width: 78%;
+	}
+	.logo_img h5 {
+		font-size: 16px;
+		margin-top: 15px;
+	}
+	.form_inner {
+		padding: 30px;
+	}
+	.bottom_links li a {
+		font-size: 16px;
+	}
+	.plan_tabl table tbody td, .plan_tabl table tbody tr th, .oinner_puchs_tbl table thead th {
+		font-size: 14px;
+	}
+	.recmnd_sctn h2 {
+		font-size: 22px;
+		max-width: 80%;
+		margin: 0 auto;
+	}
+	.container1 .checkmark {
+		width: 25px;
+		height: 25px;
+	}
+	.pay_optn h4 label {
+		padding-left: 31px;
+		line-height: 28px;
+	}
+	.price_table table {
+		width: 600px;
+	}
+	.features_outr p {
+		font-size: 16px;
+		line-height: 22px;
+    }
+    .singer_title img {
+        left: 0;
+    }
+    section.play_song tbody td:nth-child(1) img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+     }
+     
+}	
+@media (max-width:399px){
+    #play {
+        width: 30px;
+    }
+	.features_outr h3 {
+		font-size: 20px;
+	}
+	.features_outr p {
+		font-size: 15px;
+		line-height: 21px;
+		max-width: 100%;
+	}
+	header.main_header .navbar-brand img {
+		width: 200px;
+		margin-top: 13px;
+	}
+	.bottom_link ul li{
+		margin-right: 10px;
+	}
+	.bottom_link p.text-center {
+		font-size: 15px;
+	}
+	.bottom_link ul li a {
+		font-size: 14px;
+	}
+	section.footer_sctn h3 {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	.search_bar .btn {
+		padding: 12px 22px;
+		font-size: 14px;
+	}	
+	.search_bar input[type="email"] {
+		font-size: 14px;
+	}
+	section.footer_sctn h4 {
+		font-size: 16px;
+	}
+	.pay_optn .panel-heading {
+		padding: 10px 8px;
+	}
+	.pay_optn input.form-control, .pay_optn select.form-control {
+		font-size: 16px;
+	}
+	.inner_exprtn {
+		width: 100%;
+	}
+	.cvv_no {
+		width: 100%;
+		margin-top: 10px;
+	}
+	.inner_exprtn select {
+		margin-right: 0px;
+		width: 100%;
+		margin-top: 10px;
+    }
+    .player_div{min-width: auto;}
+}

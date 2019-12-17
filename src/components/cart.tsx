@@ -1,0 +1,720 @@
+import React, { useState,useContext } from 'react';
+// import { connect } from "react-redux";
+// import store from '../store';
+import { Field, reduxForm, SubmissionError } from 'redux-form'
+import { Container, Row, Col,Modal,Button } from 'react-bootstrap' 
+import img1 from '../images/img1.png';
+import editpng from '../images/edit.png';
+import play from '../images/play.png';
+import pause from '../images/pause.png';
+import icon from '../images/icon.png';
+import vibes from '../images/vibes.png';
+import dlt from '../images/dlt.png';
+import axios from 'axios';
+import $ from "jquery";
+import {config} from '../config/config'
+import store from '../store';
+import { AuthContext } from '../contexts/AuthContext';
+import { MusicContext } from '../contexts/MusicContext';
+const access_token = localStorage.getItem('access_token');
+let config1 = {
+	headers: {
+		'access_token':access_token
+	}
+  }
+  $(document).ready(function(){
+	  
+	// $(".my_loader").css('display','block');
+	// setTimeout(function(){ 
+	//   $(".my_loader").css('display','none');
+	// },5500)
+  })
+  const hanldleClick = (type: string) => {
+	store.dispatch({type});
+	
+  }
+  
+const Cart = () => { 
+  const [cartdata, setcart] = useState([]);
+  const [addons, setaddons] = useState([]);
+  const [addon_id, setaddon_id] = useState([]);
+  const [credit, setcredit] = useState(0);
+  const [discount, setdiscount] = useState(0);
+  const [cart_id, setcart_id] = useState();
+  const [selected_add, setselected_add] = useState([]);
+  const userInfo: any = useContext(AuthContext);
+  const [rate, setrate] = useState(false);
+  const [playlist_name, setplaylist_name] = useState();
+  const [playing, setPlaying] = useState(false);
+  const [songname, setsongname] = useState();
+  const [activePage, setactivepage] = useState(1);
+  const {currentSong,Addsong,changeCurrentSong,changeCurrentSongName,changeSong,setBarPlaying,changeCurrentSongId,cartListing,getCartListing} = useContext(MusicContext);
+  $(".nocartdata").click(function(){
+	alert("Add item in cart first.");
+  }); 
+  var selectedaddon:any = [];
+  
+  const delete_cart = (id:any) => {
+	
+	const access_token = localStorage.getItem('access_token');
+
+  axios.delete(
+	`${config.apiUrl}/carts/removeFromCart`,
+	{headers: {
+		'access_token':access_token
+	},
+	data:{
+		cart_id:id
+	}}
+  ).then(function (response) {
+	if(response.data.status==false){
+	  alert(response.data.message);
+	}else{
+		$(".cart_count").html(response.data.count)
+		alert(response.data.message);
+		
+		axios.get(`${config.apiUrl}/carts/getFromCart`,config1).then(response => response.data)
+.then((data) => {
+   
+  setcart(data.cart);
+
+	 })
+	}
+	  })
+
+
+	
+}
+
+const getaddon= ()=>{
+axios.get(`${config.apiUrl}/addons/getAddon`,config1).then(response => response.data)
+.then((data) => {
+   setaddons(data.addon);
+})
+	}
+const saveaddons = (selected_add:any,cart_id:any)=>{
+	axios.put(`${config.apiUrl}/carts/updateCart`, {
+		id: cart_id,
+		addon_id: selectedaddon.toString(),
+		addStatus:"true"
+	   }).then(function (response) {
+		  // console.log(response.data);
+		if(response.data.status==false){
+		  alert(response.data.message);
+		}else{
+			getcart();
+			getaddon();
+		//   alert(response.data.message);
+		  $("#rating_pops1").css('display',"none");
+		  setcart_id('')
+		 }
+	  })
+
+}
+const deleteaddon = (cart_id:any)=>{
+	axios.put(`${config.apiUrl}/carts/updateCart`, {
+		id: cart_id,
+		addon_id: '',
+		addStatus:"false"
+	   }).then(function (response) {
+		  // console.log(response.data);
+		if(response.data.status==false){
+		  alert(response.data.message);
+		}else{
+		//   alert(response.data.message);
+		  $("#rating_pops1").css('display',"none");
+		  setcart_id('')
+		 }
+	  })
+
+}
+React.useEffect(() => {
+	$(".playerClose").trigger("click");
+	$(".my_loader").css('display','block');
+	$('body').addClass('modal-open')
+	getcart();
+	setPlaying(true)
+	setBarPlaying(true)
+	 localStorage.setItem('credit_apply',"false");
+	
+  }, []);
+  	React.useEffect(() => {
+		setcart(cartListing)
+	},[cartListing])
+
+const getcart = () =>{
+	axios.get(`${config.apiUrl}/carts/getFromCart`,config1).then(response => response.data)
+.then((data) => {
+  
+  setcart(data.cart);
+  setTimeout(function(){ 
+	$(".my_loader").css('display','none');
+	$('body').removeClass('modal-open')
+	$("#cartli").addClass('active')
+  },1000)
+   
+	 })
+}
+  var carttr: any = [];
+  var cartempy: any = "";
+ 
+let pp:number = 0;
+let song_price:number = 0;
+
+var songprice: number = 0;
+
+if(userInfo.data){
+	if(userInfo.data.credit_score==0 && userInfo.data.plan_id.amount==0){
+		 	
+ if(cartdata.length>1 ){
+
+	 var length  = Math.round(cartdata.length);
+	
+	 
+	if(length<5){
+		var z = length % 2;
+	    if(z==0){
+		 z = length /2 ;
+		}
+		var left =length-(z*2);  
+		songprice = (z*149)+(left*79);
+
+
+	}else{
+		var remainder = length % 5;
+	
+	    var t;
+		if(remainder==0){
+			t = length /5 ;
+		   }else{
+			t = (length-remainder) /5 ;
+		   }
+		
+		var newlength =  remainder;
+		if(newlength>1){
+			var remaind = newlength % 2;
+		
+			var z = 0
+			if(remaind==0){
+				z = newlength /2 ;
+			   }else{
+				z  = (newlength-remaind) /2 ;
+			   }
+			  
+			   var left = newlength-(z*2);    
+			 
+		
+		}else{
+			var z= 0;
+		
+			var left = newlength;
+		}
+		
+		songprice = (z*149)+ (t*249)+(left*79);
+
+	}
+	
+ }
+
+  }
+}
+
+const handleCheckBoxClick =(e:any)=>{
+
+	if(e==true){
+	  setcredit(userInfo.data.credit_score);
+	  localStorage.setItem('credit_apply', "true");
+	  const credit_apply = localStorage.getItem('credit_apply');
+	//  alert(userInfo.data.credit_score)
+		if(userInfo.data.credit_score==1){
+		  setdiscount(Math.round(song_price))
+		}else if(userInfo.data.credit_score>=cartdata.length){
+    //    alert(song_price)
+		  setdiscount(Math.round(cartdata.length*song_price))
+	  
+		}else if(userInfo.data.credit_score<cartdata.length){
+			setdiscount(Math.round(userInfo.data.credit_score*song_price))
+		}else{
+		  setdiscount(0)
+		}
+
+		
+	}else{
+	  setcredit(0);
+	  setdiscount(0)
+	  localStorage.setItem('credit_apply',"false");
+	  const credit_apply = localStorage.getItem('credit_apply');
+	}
+  
+}
+
+$(".rating_close").click(function(){
+	$("#rating_pops1").css('display',"none");
+
+ })
+
+const handleCheckBoxClick1 =(e:any,cart_id:any)=>{
+     
+	if(e.target.checked==true){
+		
+		$(".addoncheck"). prop("checked", false);
+		getaddon();
+		$("#rating_pops1").css('display',"block");
+		setcart_id(cart_id)
+	
+
+		
+	}else{
+		deleteaddon(cart_id);
+		getcart();
+	}
+  
+}
+
+
+
+const currentplaylist = (playlist_id:any,currentsong_id:any) => {
+	let tracks:any = [];
+
+	if(playlist_name==="The Jukebox"){
+		axios.get(`${config.apiUrl}/songs/getSongJuke/`+activePage).then(response => response.data)
+		.then((data) => {
+			localStorage.setItem('totalkeys',data.songDetails.length);
+			Object.keys(data.songDetails).map(function(key: any,value:any) {
+			
+			   if(data.songDetails[key]['_id']===currentsong_id){
+				 localStorage.setItem('current_pos',key);
+				   tracks['current_pos'] =key;
+				   if(key+1<=data.songDetails.length){
+					   tracks['next'] =parseInt(key)+1;
+				   }
+				   if(key-1>=0){
+				   tracks['prev'] =key-1;
+				  } 
+			   }
+		     tracks.push({name:data.songDetails[key]['song_name'],song_file:data.songDetails[key]['song_file'],song_id:data.songDetails[key]['_id']});
+		   	 })
+   
+				localStorage.setItem('tracks', JSON.stringify(tracks));
+		 
+		 })
+	}else if(playlist_id=="personal") {
+		const access_token = localStorage.getItem('access_token');
+	let config1 = {
+		headers: {
+			'access_token': access_token,
+		
+		}
+	  }
+	 
+    axios.get(`${config.apiUrl}/songs/personal/`+activePage,config1).then(response => response.data)
+    .then((data) => {
+		localStorage.setItem('totalkeys',data.songDetails.length);
+		Object.keys(data.songDetails).map(function(key: any,value:any) {
+		
+		   if(data.songDetails[key]['_id']===currentsong_id){
+			 localStorage.setItem('current_pos',key);
+			   tracks['current_pos'] =key;
+			   if(key+1<=data.songDetails.length){
+				   tracks['next'] =parseInt(key)+1;
+			   }
+			   if(key-1>=0){
+			   tracks['prev'] =key-1;
+			  } 
+		   }
+	  tracks.push({name:data.songDetails[key]['song_name'],song_file:data.songDetails[key]['song_file'],song_id:data.songDetails[key]['_id']});
+	   
+	  
+	 
+					 })
+
+			localStorage.setItem('tracks', JSON.stringify(tracks))
+	
+     })
+
+	}else{
+		axios.get(`${config.apiUrl}/songs/getSong/`+playlist_id+`/`+activePage).then(response => response.data)
+		.then((data) => {
+		
+   
+		  localStorage.setItem('totalkeys',data.songDetails.length);
+		 Object.keys(data.songDetails).map(function(key: any,value:any) {
+		 
+			if(data.songDetails[key]['_id']===currentsong_id){
+			  localStorage.setItem('current_pos',key);
+				tracks['current_pos'] =key;
+				if(key+1<=data.songDetails.length){
+					tracks['next'] =parseInt(key)+1;
+				}
+				if(key-1>=0){
+				tracks['prev'] =key-1;
+			   } 
+			}
+	   tracks.push({name:data.songDetails[key]['song_name'],song_file:data.songDetails[key]['song_file'],song_id:data.songDetails[key]['_id']});
+		
+	   
+	  
+                      })
+
+			 localStorage.setItem('tracks', JSON.stringify(tracks));
+		  })
+	}
+	
+}
+
+
+
+const playsong=(e:any,playlist_id:any)=>{
+	var  id = e.id;
+	 hanldleClick('RESET')
+	setrate(false)
+	if(playlist_name=="Personalized Playlist"){
+		playlist_id = "personal"
+	}
+   // if($('.jukesonglist ul .active').children().children().attr('id')==e.id){
+if($('.oinner_puchs_tbl tr.active').children().children().attr('id')==e.id){
+	   if(playing==false) {
+		   setPlaying(true) 
+		   setBarPlaying(true)
+		  $('.hidden_play').css('display',"block");
+		  $("#"+id).attr("src",pause);
+		 }else{
+			setBarPlaying(false)
+			 $("#"+id).attr("src",play);
+		   setPlaying(false)  
+		   //$('.hidden_play').css('display',"none");
+		  
+	 
+		 }
+
+   }else{
+   $(".click_meplay").attr("src",play);
+   $('.oinner_puchs_tbl tr').removeClass('active')
+   $('.jukesonglist ul li').removeClass('active')
+
+   setsongname($("#"+id).attr("data-name"));
+   console.log(id)
+   $("#"+id).parent().parent().addClass("active")
+   let myurl = $("#"+id).attr("data-url");
+
+   let song_id = $("#"+id).attr("data-id");
+   $("#"+id).attr("src",pause);
+   $("#"+id).addClass("play");
+   changeCurrentSong(myurl ? myurl : "")
+   changeCurrentSongId(song_id ? song_id : "")
+   let mysongname = $("#"+id).attr("data-name");
+   localStorage.setItem('songurl',(myurl ? myurl : ""));
+   localStorage.setItem('currentSongname',(mysongname ? mysongname : ""));
+   changeCurrentSongName(mysongname ? mysongname : "")
+   currentplaylist(playlist_id,song_id)
+
+	  
+			 if($("#"+id).hasClass("showing")){
+		   
+			   //   $('.hidden_play').toggle();
+			  }else{
+			$('.click_meplay').removeClass("showing");
+				 $("#"+id).addClass("showing");
+				 setPlaying(true) 
+				 setBarPlaying(true)
+				 $('.hidden_play').css('display',"block");
+			  }
+		   }
+ }
+
+
+const handleAddon =(e:any)=>{
+
+	if(e.target.checked==true){
+		selectedaddon.push(e.target.value);
+	}else{
+		selectedaddon.pop(e.target.value);
+	}
+	
+	
+}
+ var addonprice:any = 0;
+  if(cartdata.length>0){
+
+    carttr = Object.keys(cartdata).map(function(key: any,value:any) {
+		var checked:boolean = false;
+		let newid = "myplayModal"+key;
+		let newid1 = "myplayModalsi"+key;
+		let nn = parseInt(key)+1;
+		let nextid = "myplayModalsi"+nn;
+		song_price = cartdata[key]['song_id']['price'];
+		Object.keys(cartdata[key]['addon_id']).map(function(key1: any,value1:any) {
+		addonprice =  addonprice + parseInt(cartdata[key]['addon_id'][key1]['price']);
+		
+	})
+	let previd = "";
+		if(key>0){
+			let keynew = key-1
+		}
+	if(cartdata[key]['addStatus']==true){
+		checked=true;	
+	}else{
+		checked=false;	
+	}
+		pp = pp + parseFloat(cartdata[key]['song_id']['price'])
+	  var name = "addon"+key;
+		pp = Math.round(pp);
+		var songimg = play;
+		var activeclass = ""
+		if (currentSong ==cartdata[key]['song_id']['song_file']){
+			songimg = pause;
+			activeclass = "active";
+		   }else{
+			songimg = play;
+			activeclass = "";
+		   }
+
+       return <tr key={key} className={activeclass}>
+
+<td style={{width:"90px",minWidth:"70px"}}><img className="click_meplay" id={newid1} data-next={nextid}  data-name={cartdata[key]['song_id']['song_name']} data-des="" data-prev={previd} data-id= {cartdata[key]['song_id']["_id"]} onClick={e => playsong(e.target,cartdata[key]['song_id']['genre_id'])} data-url={cartdata[key]['song_id']['song_file'] } src={songimg}/></td>
+<td style={{textAlign:"left"}}>{cartdata[key]['song_id']['song_name']}</td>
+
+
+	   {/* <td><img className="click_meplay" src={play}/>{cartdata[key]['song_id']['song_name']}</td> */}
+	   <td>$ {cartdata[key]['song_id']['price']}</td>
+	   <td>	<p className="chckbx">
+						
+			<Field name={name}  id={key} component="input" type="checkbox" checked={checked}  onChange={(e:any) => {handleCheckBoxClick1(e,cartdata[key]['_id'])}}  />
+						
+							 
+		
+							</p></td>
+	   <td style={{cursor:"pointer"}}><a onClick={() => {delete_cart(cartdata[key]['_id'])}}><img src={dlt}/></a></td>
+   </tr>
+       
+   
+      
+  });
+}else{
+	carttr =   <h2> Your cart is empty </h2>
+  }
+  var addonli: any = [];
+  if(addons.length>0){
+    addonli = Object.keys(addons).map(function(key: any,value:any) {
+    var id ="addon"+key;
+	
+       return <h3 key={key}> <p className="chckbx">
+	   <label className="container_box newbox">{addons[key]['addon_name']}
+	   <input name="addon[]" className="addoncheck"  id={id} value={addons[key]['_id']}  type="checkbox"  onChange={(e:any) => {handleAddon(e)}} />
+	   {/* <Field   /> */}
+   
+		 <span className="checkmark"></span>
+		 <span style={{paddingLeft: "36px"}}>$ {addons[key]['price']}</span>
+	   </label>
+	   </p></h3>
+   
+      
+  });
+}else{
+	addonli =   <h2> </h2>
+  }
+//   setprice(pp);
+    return (
+        <>
+		<div className="my_loader">
+          <div className="loading_img">
+         <div className="loader_txt"> <img src={require("../images/loading_img.gif")}/>
+           <h3>Loading....</h3>
+          </div>
+      </div>
+      <div className="loader_overly"></div>
+      </div>
+     <section className="cart_sctn">
+	<div className="container-fluid">
+		<div className="row">
+			<div className="col-lg-8 col-md-8">
+				<div className="price_table">
+					<h3>YOUR CART</h3>
+   
+					<h5>You have {cartdata.length} items in your cart</h5>
+					{
+                  (() => { if(cartdata.length>0)
+						return(
+						
+					<div className="oinner_puchs_tbl tableresponsive">
+					<div className="table-responsive">
+						  <table className="table">
+							<thead>
+							  <tr>
+								<th colSpan={2}>Item</th>
+								<th>Price</th>
+								<th title="Sounds Sphere offers add-ons including track stems, song mixing, and song mixing with vocal production. Simply select the add-on you want using the boxes">Add-On</th>
+								<th>Remove</th>
+							  </tr>
+							</thead>
+							<tbody>
+							{carttr}
+							</tbody>
+						</table>
+						<div className="price_table">
+						<h3>Add-Ons</h3>
+			<h5>Sounds Sphere offers add-ons including track stems, song mixing, and song mixing with vocal production. Simply select the add-on you want using the checkboxes above.</h5>
+					</div>
+					</div>
+				</div>)
+				else
+						return(<h2 className="text-center">No data in  your cart</h2>)
+					})()
+					
+				}
+			
+				</div>
+		
+			</div>
+			<div className="col-lg-4 col-md-4">
+				<div className="save_optn">
+					<ul>
+						<li><h1>Add More Tracks and Save!</h1></li>
+						<li><h4>2 for $149</h4><h4>5 for $249</h4></li>
+					</ul>
+				</div>
+				<div className="summry_cart chkout_user">
+					<h4>Cart Summary</h4>
+					<ul>
+						<li>
+							<h3>Subtotal<span>$ {pp}</span></h3>
+						</li>
+						<li>
+							<h3>GST<span>$10</span></h3>
+						</li>
+						<li>
+							<h3>Shipping<span>$10</span></h3>
+						</li>
+						<li className="tlt_bill">
+							<h3>Total<span>${pp}</span></h3>
+							<p className="chckbx">
+							<label className="container_box">Apply credit?<br></br>	{userInfo.data ? (
+								<span>{userInfo.data.credit_score} Credits Available</span>
+							
+							):(
+								<span>0 Credits Available</span>
+							)}
+<Field name="employed" id="credit_apply" component="input" type="checkbox"  onChange={(e:any) => {handleCheckBoxClick(e.target.checked)}}  />
+						
+							  <span className="checkmark"></span>
+							</label>
+							</p>
+
+						</li>
+					
+						
+						{songprice==0 ? (
+							<>
+							<li>
+							<h5>Total<span>${pp+addonprice}</span></h5>
+							{userInfo.data ? (
+							<h3>Discount<span id="my_credit">-$ {discount}</span></h3>
+							):(
+                           <h3>Credit<span>-$ 0</span></h3>
+							)}
+						</li>
+						{addonprice>0 ? (
+						<li> <h5>Add-On Price<span>${addonprice}</span></h5></li>
+						):(<></>)}
+						<li> <h5>Grand Total<span>${pp-discount+addonprice}</span></h5></li>
+						</>
+								
+							):(
+								<>
+									{addonprice>0 ? (
+						<li> <h5>Add-On Price<span>${addonprice}</span></h5></li>
+						):(<></>)}
+								<li>
+								<h5>Total<span>${pp+addonprice}</span></h5>
+								{userInfo.data ? (
+								<h3>Discount<span id="my_credit">-$ {(pp-songprice).toFixed(2)}</span></h3>
+								):(
+							   <h3>Credit<span>-$ 0</span></h3>
+								)}
+							</li>
+								<li> <h5>Grand Total<span>$ {songprice+addonprice}</span></h5></li>
+								</>
+							)}
+					
+					</ul>
+					<div className="summry_btns">
+						<a  href="/" className="btn">Continue Shopping</a>
+						{
+                  (() => { if(cartdata.length>0)
+						return(<a className="btn" href="/billing">Checkout</a>)
+						else
+						return(<a className="btn disable_btn" >Checkout</a>)
+					})()
+					
+				}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+<div className="modal fade in" id="rating_pops1" role="dialog"> 
+    <div className="modal-dialog modal-sm add_onpop">
+      <div className="modal-content">
+	     <div className="modal-body">
+        <div className="rating_headg">
+          <button type="button" className="close rating_close" data-dismiss="modal">&times;</button>
+		  <div className="price_table">
+						<h3>Add-Ons</h3></div>
+			{/* <p style={{fontSize:"12px"}}>Sounds Sphere offers add-ons including track stems, song mixing, and song mixing with vocal production. Simply select the add-on you want using the boxes</p> */}
+			{addonli}
+        </div>
+  
+<div className="errors"> <strong style={{color: "#F20000"}} className="rating_err"></strong></div> 	
+<div className="btn_ok text-center">
+<button  className="btn btn_submt btn_rating" onClick={() => {saveaddons(addon_id,cart_id)}}>Add</button>
+</div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div className="modal right fade " id="myModal2"  role="dialog" aria-labelledby="myModalLabel2">
+		<div className="modal-dialog lic home_lic" role="document">
+			<div className="modal-content">
+
+			
+			<div className="modal-header">
+			<h4 className="modal-title" id="myModalLabel2">	License Song</h4>
+					{/* <button type="button" className="close lincense-close" data-id="myModal2" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> */}
+					
+				</div>
+				
+		
+				<div className="modal-body">
+					<h4><i className="success_message"></i></h4>
+				<div className="innre_listng license_song">
+						<ul>
+							{carttr}
+						
+						</ul>
+					</div>
+					<div className="summry_cart chkout_user">
+					<div className="summry_btns">
+						<a data-dismiss="modal" aria-label="Close"   className="btn continue_shop"  data-id="myModal2"  >Continue Shopping</a>
+						<a className="btn" href="/cart">Checkout</a>
+					</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+        </>
+
+
+    )
+
+
+}
+export default reduxForm({
+    form: 'loginForm' // a unique identifier for this form
+  })(Cart)
+// export default Cart;

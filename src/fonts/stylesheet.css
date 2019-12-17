@@ -1,0 +1,384 @@
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('AvenirNextLTPro-BoldItalic.eot');
+    src: url('AvenirNextLTPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-BoldItalic.woff2') format('woff2'),
+        url('AvenirNextLTPro-BoldItalic.woff') format('woff'),
+        url('AvenirNextLTPro-BoldItalic.ttf') format('truetype'),
+        url('AvenirNextLTPro-BoldItalic.svg#AvenirNextLTPro-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('AvenirNextLTPro-Ultralight.eot');
+    src: url('AvenirNextLTPro-Ultralight.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-Ultralight.woff2') format('woff2'),
+        url('AvenirNextLTPro-Ultralight.woff') format('woff'),
+        url('AvenirNextLTPro-Ultralight.ttf') format('truetype'),
+        url('AvenirNextLTPro-Ultralight.svg#AvenirNextLTPro-Ultralight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('AvenirNextLTPro-Regular.eot');
+    src: url('AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-Regular.woff2') format('woff2'),
+        url('AvenirNextLTPro-Regular.woff') format('woff'),
+        url('AvenirNextLTPro-Regular.ttf') format('truetype'),
+        url('AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Pro Ultralight Cond';
+    src: url('AvenirNextPro-UltralighCondIt.eot');
+    src: url('AvenirNextPro-UltralighCondIt.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextPro-UltralighCondIt.woff2') format('woff2'),
+        url('AvenirNextPro-UltralighCondIt.woff') format('woff'),
+        url('AvenirNextPro-UltralighCondIt.ttf') format('truetype'),
+        url('AvenirNextPro-UltralighCondIt.svg#AvenirNextPro-UltralighCondIt') format('svg');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('AvenirNextLTPro-MediumItalic.eot');
+    src: url('AvenirNextLTPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-MediumItalic.woff2') format('woff2'),
+        url('AvenirNextLTPro-MediumItalic.woff') format('woff'),
+        url('AvenirNextLTPro-MediumItalic.ttf') format('truetype'),
+        url('AvenirNextLTPro-MediumItalic.svg#AvenirNextLTPro-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Med Cond';
+    src: url('AvenirNext-MediumCond.eot');
+    src: url('AvenirNext-MediumCond.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNext-MediumCond.woff2') format('woff2'),
+        url('AvenirNext-MediumCond.woff') format('woff'),
+        url('AvenirNext-MediumCond.ttf') format('truetype'),
+        url('AvenirNext-MediumCond.svg#AvenirNext-MediumCond') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('AvenirNextLTPro-Heavy.eot');
+    src: url('AvenirNextLTPro-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-Heavy.woff2') format('woff2'),
+        url('AvenirNextLTPro-Heavy.woff') format('woff'),
+        url('AvenirNextLTPro-Heavy.ttf') format('truetype'),
+        url('AvenirNextLTPro-Heavy.svg#AvenirNextLTPro-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Demi';
+    src: url('AvenirNextLTPro-Demi.eot');
+    src: url('AvenirNextLTPro-Demi.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-Demi.woff2') format('woff2'),
+        url('AvenirNextLTPro-Demi.woff') format('woff'),
+        url('AvenirNextLTPro-Demi.ttf') format('truetype'),
+        url('AvenirNextLTPro-Demi.svg#AvenirNextLTPro-Demi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('AvenirNextLTPro-Thin.eot');
+    src: url('AvenirNextLTPro-Thin.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-Thin.woff2') format('woff2'),
+        url('AvenirNextLTPro-Thin.woff') format('woff'),
+        url('AvenirNextLTPro-Thin.ttf') format('truetype'),
+        url('AvenirNextLTPro-Thin.svg#AvenirNextLTPro-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Pro Ultralight Cond';
+    src: url('AvenirNextPro-UltralightCond.eot');
+    src: url('AvenirNextPro-UltralightCond.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextPro-UltralightCond.woff2') format('woff2'),
+        url('AvenirNextPro-UltralightCond.woff') format('woff'),
+        url('AvenirNextPro-UltralightCond.ttf') format('truetype'),
+        url('AvenirNextPro-UltralightCond.svg#AvenirNextPro-UltralightCond') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Cond';
+    src: url('AvenirNext-BoldCond.eot');
+    src: url('AvenirNext-BoldCond.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNext-BoldCond.woff2') format('woff2'),
+        url('AvenirNext-BoldCond.woff') format('woff'),
+        url('AvenirNext-BoldCond.ttf') format('truetype'),
+        url('AvenirNext-BoldCond.svg#AvenirNext-BoldCond') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Demi';
+    src: url('AvenirNextLTPro-DemiItalic.eot');
+    src: url('AvenirNextLTPro-DemiItalic.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-DemiItalic.woff2') format('woff2'),
+        url('AvenirNextLTPro-DemiItalic.woff') format('woff'),
+        url('AvenirNextLTPro-DemiItalic.ttf') format('truetype'),
+        url('AvenirNextLTPro-DemiItalic.svg#AvenirNextLTPro-DemiItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Thin Cond';
+    src: url('AvenirNextLTPro-ThinCondensed.eot');
+    src: url('AvenirNextLTPro-ThinCondensed.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-ThinCondensed.woff2') format('woff2'),
+        url('AvenirNextLTPro-ThinCondensed.woff') format('woff'),
+        url('AvenirNextLTPro-ThinCondensed.ttf') format('truetype'),
+        url('AvenirNextLTPro-ThinCondensed.svg#AvenirNextLTPro-ThinCondensed') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('AvenirNextLTPro-Medium.eot');
+    src: url('AvenirNextLTPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-Medium.woff2') format('woff2'),
+        url('AvenirNextLTPro-Medium.woff') format('woff'),
+        url('AvenirNextLTPro-Medium.ttf') format('truetype'),
+        url('AvenirNextLTPro-Medium.svg#AvenirNextLTPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('AvenirNextLTPro-Light.eot');
+    src: url('AvenirNextLTPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-Light.woff2') format('woff2'),
+        url('AvenirNextLTPro-Light.woff') format('woff'),
+        url('AvenirNextLTPro-Light.ttf') format('truetype'),
+        url('AvenirNextLTPro-Light.svg#AvenirNextLTPro-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Demi Cond';
+    src: url('AvenirNext-DemiCond.eot');
+    src: url('AvenirNext-DemiCond.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNext-DemiCond.woff2') format('woff2'),
+        url('AvenirNext-DemiCond.woff') format('woff'),
+        url('AvenirNext-DemiCond.ttf') format('truetype'),
+        url('AvenirNext-DemiCond.svg#AvenirNext-DemiCond') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Light Cond';
+    src: url('AvenirNextLTPro-LightCond.eot');
+    src: url('AvenirNextLTPro-LightCond.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-LightCond.woff2') format('woff2'),
+        url('AvenirNextLTPro-LightCond.woff') format('woff'),
+        url('AvenirNextLTPro-LightCond.ttf') format('truetype'),
+        url('AvenirNextLTPro-LightCond.svg#AvenirNextLTPro-LightCond') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Med Cond';
+    src: url('AvenirNext-MediumCondItalic.eot');
+    src: url('AvenirNext-MediumCondItalic.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNext-MediumCondItalic.woff2') format('woff2'),
+        url('AvenirNext-MediumCondItalic.woff') format('woff'),
+        url('AvenirNext-MediumCondItalic.ttf') format('truetype'),
+        url('AvenirNext-MediumCondItalic.svg#AvenirNext-MediumCondItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('AvenirNextLTPro-Italic.eot');
+    src: url('AvenirNextLTPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-Italic.woff2') format('woff2'),
+        url('AvenirNextLTPro-Italic.woff') format('woff'),
+        url('AvenirNextLTPro-Italic.ttf') format('truetype'),
+        url('AvenirNextLTPro-Italic.svg#AvenirNextLTPro-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Cond';
+    src: url('AvenirNext-CondRegular.eot');
+    src: url('AvenirNext-CondRegular.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNext-CondRegular.woff2') format('woff2'),
+        url('AvenirNext-CondRegular.woff') format('woff'),
+        url('AvenirNext-CondRegular.ttf') format('truetype'),
+        url('AvenirNext-CondRegular.svg#AvenirNext-CondRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Cond';
+    src: url('AvenirNext-CondItalic.eot');
+    src: url('AvenirNext-CondItalic.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNext-CondItalic.woff2') format('woff2'),
+        url('AvenirNext-CondItalic.woff') format('woff'),
+        url('AvenirNext-CondItalic.ttf') format('truetype'),
+        url('AvenirNext-CondItalic.svg#AvenirNext-CondItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro UltLt';
+    src: url('AvenirNextLTPro-UltLtItalic.eot');
+    src: url('AvenirNextLTPro-UltLtItalic.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-UltLtItalic.woff2') format('woff2'),
+        url('AvenirNextLTPro-UltLtItalic.woff') format('woff'),
+        url('AvenirNextLTPro-UltLtItalic.ttf') format('truetype'),
+        url('AvenirNextLTPro-UltLtItalic.svg#AvenirNextLTPro-UltLtItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Thin Cond';
+    src: url('AvenirNextLTPro-ThCnIt.eot');
+    src: url('AvenirNextLTPro-ThCnIt.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-ThCnIt.woff2') format('woff2'),
+        url('AvenirNextLTPro-ThCnIt.woff') format('woff'),
+        url('AvenirNextLTPro-ThCnIt.ttf') format('truetype'),
+        url('AvenirNextLTPro-ThCnIt.svg#AvenirNextLTPro-ThCnIt') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Heavy Cond';
+    src: url('AvenirNext-HeavyCondItalic.eot');
+    src: url('AvenirNext-HeavyCondItalic.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNext-HeavyCondItalic.woff2') format('woff2'),
+        url('AvenirNext-HeavyCondItalic.woff') format('woff'),
+        url('AvenirNext-HeavyCondItalic.ttf') format('truetype'),
+        url('AvenirNext-HeavyCondItalic.svg#AvenirNext-HeavyCondItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Demi Cond';
+    src: url('AvenirNext-DemiCondItalic.eot');
+    src: url('AvenirNext-DemiCondItalic.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNext-DemiCondItalic.woff2') format('woff2'),
+        url('AvenirNext-DemiCondItalic.woff') format('woff'),
+        url('AvenirNext-DemiCondItalic.ttf') format('truetype'),
+        url('AvenirNext-DemiCondItalic.svg#AvenirNext-DemiCondItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Cond';
+    src: url('AvenirNext-BoldCondItalic.eot');
+    src: url('AvenirNext-BoldCondItalic.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNext-BoldCondItalic.woff2') format('woff2'),
+        url('AvenirNext-BoldCondItalic.woff') format('woff'),
+        url('AvenirNext-BoldCondItalic.ttf') format('truetype'),
+        url('AvenirNext-BoldCondItalic.svg#AvenirNext-BoldCondItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('AvenirNextLTPro-ThinItalic.eot');
+    src: url('AvenirNextLTPro-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-ThinItalic.woff2') format('woff2'),
+        url('AvenirNextLTPro-ThinItalic.woff') format('woff'),
+        url('AvenirNextLTPro-ThinItalic.ttf') format('truetype'),
+        url('AvenirNextLTPro-ThinItalic.svg#AvenirNextLTPro-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('AvenirNextLTPro-LightItalic.eot');
+    src: url('AvenirNextLTPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-LightItalic.woff2') format('woff2'),
+        url('AvenirNextLTPro-LightItalic.woff') format('woff'),
+        url('AvenirNextLTPro-LightItalic.ttf') format('truetype'),
+        url('AvenirNextLTPro-LightItalic.svg#AvenirNextLTPro-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('AvenirNextLTPro-HeavyItalic.eot');
+    src: url('AvenirNextLTPro-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-HeavyItalic.woff2') format('woff2'),
+        url('AvenirNextLTPro-HeavyItalic.woff') format('woff'),
+        url('AvenirNextLTPro-HeavyItalic.ttf') format('truetype'),
+        url('AvenirNextLTPro-HeavyItalic.svg#AvenirNextLTPro-HeavyItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Light Cond';
+    src: url('AvenirNextLTPro-LtCnIt.eot');
+    src: url('AvenirNextLTPro-LtCnIt.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-LtCnIt.woff2') format('woff2'),
+        url('AvenirNextLTPro-LtCnIt.woff') format('woff'),
+        url('AvenirNextLTPro-LtCnIt.ttf') format('truetype'),
+        url('AvenirNextLTPro-LtCnIt.svg#AvenirNextLTPro-LtCnIt') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('AvenirNextLTPro-Bold.eot');
+    src: url('AvenirNextLTPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNextLTPro-Bold.woff2') format('woff2'),
+        url('AvenirNextLTPro-Bold.woff') format('woff'),
+        url('AvenirNextLTPro-Bold.ttf') format('truetype'),
+        url('AvenirNextLTPro-Bold.svg#AvenirNextLTPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Heavy Cond';
+    src: url('AvenirNext-HeavyCond.eot');
+    src: url('AvenirNext-HeavyCond.eot?#iefix') format('embedded-opentype'),
+        url('AvenirNext-HeavyCond.woff2') format('woff2'),
+        url('AvenirNext-HeavyCond.woff') format('woff'),
+        url('AvenirNext-HeavyCond.ttf') format('truetype'),
+        url('AvenirNext-HeavyCond.svg#AvenirNext-HeavyCond') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
